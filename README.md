@@ -1,4 +1,4 @@
-# AI Platform Security Monitoring & MITRE ATLAS Detection
+# Project 10 - AI Platform Security Monitoring & MITRE ATLAS Detection
 
 MONITORING | MITRE ATLAS | DETECTION | CONTAINMENT
 
