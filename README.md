@@ -1,5 +1,9 @@
 # AI Platform Security Monitoring & MITRE ATLAS Detection
 
+MONITORING | MITRE ATLAS | DETECTION | CONTAINMENT
+
+## Overview
+
 A standalone local AI security laboratory connecting actual model inference to
 telemetry collection, detection, durable finding delivery, investigation,
 approved containment, and recovery.
