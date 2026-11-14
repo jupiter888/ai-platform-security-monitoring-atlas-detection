@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-14T15:31:57.642376+00:00",
+  "status": "passed",
+  "init_enabled": true,
+  "compose_stop_exit_code": 0,
+  "container_status": "exited",
+  "container_exit_code": 0,
+  "image_id": "sha256:0615ec4fbd4072004b7d86b46ded63013a74b7d6eb1119273dd89e8fa25c13cf",
+  "scope": "One controlled Grafana stop after enabling init",
+  "limitations": [
+    "Does not prove the earlier zombie-process failure cannot recur",
+    "A successful stop does not necessarily establish graceful application exit"
+  ]
+}

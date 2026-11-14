@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-14T15:19:16.437627+00:00",
+  "stage": "drained_before_controlled_restart",
+  "status": "passed",
+  "metrics": {
+    "collector_buffer": 0.0,
+    "outbox_pending": 0.0,
+    "outbox_delivered": 16.0,
+    "query_healthy": 1.0,
+    "delivery_healthy": 1.0
+  },
+  "successful_poll_age_seconds": 2.2489538192749023,
+  "scope": "Existing-state restart; not first-use credential provisioning"
+}

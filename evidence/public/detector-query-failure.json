@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "scope": "Loki outage while the detector remains running",
+  "observations": [
+    {
+      "observed_at": "2026-11-13T21:19:18.808969+00:00",
+      "scrape": 1.0,
+      "query_healthy": 1.0,
+      "delivery_healthy": 1.0,
+      "poll_age": 5.15739107131958,
+      "successful_poll_age": 5.161391019821167,
+      "pending": 0.0
+    },
+    {
+      "observed_at": "2026-11-13T21:19:21.834831+00:00",
+      "scrape": 1.0,
+      "query_healthy": 1.0,
+      "delivery_healthy": 1.0,
+      "poll_age": 8.180391073226929,
+      "successful_poll_age": 8.183391094207764,
+      "pending": 0.0
+    },
+    {
+      "observed_at": "2026-11-13T21:19:24.855070+00:00",
+      "scrape": 1.0,
+      "query_healthy": 0.0,
+      "delivery_healthy": 1.0,
+      "poll_age": 6.15787672996521,
+      "successful_poll_age": 11.207391023635864,
+      "pending": 0.0
+    },
+    {
+      "observed_at": "2026-11-13T21:19:27.879857+00:00",
+      "scrape": 1.0,
+      "query_healthy": 0.0,
+      "delivery_healthy": 1.0,
+      "poll_age": 4.232367992401123,
+      "successful_poll_age": 14.232391119003296,
+      "pending": 0.0
+    },
+    {
+      "observed_at": "2026-11-13T21:19:30.902247+00:00",
+      "scrape": 1.0,
+      "query_healthy": 0.0,
+      "delivery_healthy": 1.0,
+      "poll_age": 7.255367994308472,
+      "successful_poll_age": 17.254391193389893,
+      "pending": 0.0
+    }
+  ],
+  "baseline": {
+    "scrape": 1.0,
+    "query_healthy": 1.0,
+    "delivery_healthy": 1.0,
+    "poll_age": 4.15739107131958,
+    "successful_poll_age": 4.161391019821167,
+    "pending": 0.0
+  },
+  "loki_restart_command_succeeded": true
+}

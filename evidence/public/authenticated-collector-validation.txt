@@ -1,0 +1,7 @@
+PASS: inference_succeeded event buffered
+PASS: authentication_failed event buffered
+PASS: model_access_denied event buffered
+PASS: duplicate event rejected
+PASS: invalid event rejected without reflecting input
+Live collector validation: 5/5 passed
+Provenance: synthetic; no gateway attack was executed

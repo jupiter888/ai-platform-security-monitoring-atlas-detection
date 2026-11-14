@@ -1,0 +1,73 @@
+H01: 12 events verified; assessed
+  DET-002: peak=12; queued=False; delivered=False
+  DET-003: peak=12; queued=False; delivered=False
+H02: 40 events verified; assessed
+  DET-002: peak=40; queued=True; delivered=True
+  DET-003: peak=40; queued=True; delivered=True
+H03: 36 events verified; assessed
+  DET-002: peak=36; queued=True; delivered=True
+  DET-003: peak=36; queued=True; delivered=True
+H04: 36 events verified; assessed
+  DET-002: peak=18; queued=False; delivered=False
+  DET-003: peak=36; queued=True; delivered=True
+{
+  "finding_queued": {
+    "DET-002": {
+      "true_positives": 1,
+      "false_positives": 1,
+      "true_negatives": 1,
+      "false_negatives": 1,
+      "inconclusive_scenarios_excluded": 0,
+      "precision": 0.5,
+      "recall": 0.5
+    },
+    "DET-003": {
+      "true_positives": 2,
+      "false_positives": 1,
+      "true_negatives": 1,
+      "false_negatives": 0,
+      "inconclusive_scenarios_excluded": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0
+    },
+    "combined": {
+      "true_positives": 2,
+      "false_positives": 1,
+      "true_negatives": 1,
+      "false_negatives": 0,
+      "inconclusive_scenarios_excluded": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0
+    }
+  },
+  "finding_delivered": {
+    "DET-002": {
+      "true_positives": 1,
+      "false_positives": 1,
+      "true_negatives": 1,
+      "false_negatives": 1,
+      "inconclusive_scenarios_excluded": 0,
+      "precision": 0.5,
+      "recall": 0.5
+    },
+    "DET-003": {
+      "true_positives": 2,
+      "false_positives": 1,
+      "true_negatives": 1,
+      "false_negatives": 0,
+      "inconclusive_scenarios_excluded": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0
+    },
+    "combined": {
+      "true_positives": 2,
+      "false_positives": 1,
+      "true_negatives": 1,
+      "false_negatives": 0,
+      "inconclusive_scenarios_excluded": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0
+    }
+  }
+}
+Held-out assessment saved; thresholds and manifest unchanged.

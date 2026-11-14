@@ -1,0 +1,182 @@
+{
+  "id": null,
+  "uid": "p10-collector",
+  "title": "Project 10 — Telemetry Collection",
+  "description": "Collector operational metrics. Current validation traffic is synthetic. These panels do not measure detected attacks.",
+  "tags": ["project10", "telemetry", "security-monitoring"],
+  "timezone": "utc",
+  "schemaVersion": 39,
+  "version": 1,
+  "editable": false,
+  "refresh": "5s",
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "text",
+      "title": "Evidence scope",
+      "gridPos": {"h": 3, "w": 24, "x": 0, "y": 0},
+      "options": {
+        "mode": "markdown",
+        "content": "**Live collector metrics; current input events are synthetic.** Acceptance means in-memory buffering, not durable storage or attack detection. Counters reset when the collector restarts. The buffer does not drain yet."
+      }
+    },
+    {
+      "id": 2,
+      "type": "stat",
+      "title": "Collector scrape health",
+      "datasource": {"type": "prometheus", "uid": "p10-prometheus"},
+      "gridPos": {"h": 5, "w": 6, "x": 0, "y": 3},
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "up{job=\"p10-collector\"}",
+          "instant": true
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "min": 0,
+          "max": 1,
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "0": {"text": "DOWN", "color": "red"},
+                "1": {"text": "UP", "color": "green"}
+              }
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {"color": "red", "value": null},
+              {"color": "green", "value": 1}
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {"calcs": ["lastNotNull"], "fields": "", "values": false},
+        "colorMode": "background",
+        "graphMode": "none"
+      }
+    },
+    {
+      "id": 3,
+      "type": "stat",
+      "title": "Accepted events — process lifetime",
+      "datasource": {"type": "prometheus", "uid": "p10-prometheus"},
+      "gridPos": {"h": 5, "w": 6, "x": 6, "y": 3},
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "p10_collector_events_accepted_total{job=\"p10-collector\"}",
+          "instant": true
+        }
+      ],
+      "options": {
+        "reduceOptions": {"calcs": ["lastNotNull"], "fields": "", "values": false},
+        "colorMode": "value",
+        "graphMode": "none"
+      }
+    },
+    {
+      "id": 4,
+      "type": "stat",
+      "title": "Invalid events — process lifetime",
+      "datasource": {"type": "prometheus", "uid": "p10-prometheus"},
+      "gridPos": {"h": 5, "w": 6, "x": 12, "y": 3},
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "p10_collector_events_invalid_total{job=\"p10-collector\"}",
+          "instant": true
+        }
+      ],
+      "options": {
+        "reduceOptions": {"calcs": ["lastNotNull"], "fields": "", "values": false},
+        "colorMode": "value",
+        "graphMode": "none"
+      }
+    },
+    {
+      "id": 5,
+      "type": "stat",
+      "title": "Duplicate events — process lifetime",
+      "datasource": {"type": "prometheus", "uid": "p10-prometheus"},
+      "gridPos": {"h": 5, "w": 6, "x": 18, "y": 3},
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "p10_collector_events_duplicate_total{job=\"p10-collector\"}",
+          "instant": true
+        }
+      ],
+      "options": {
+        "reduceOptions": {"calcs": ["lastNotNull"], "fields": "", "values": false},
+        "colorMode": "value",
+        "graphMode": "none"
+      }
+    },
+    {
+      "id": 6,
+      "type": "timeseries",
+      "title": "Collector ingestion rates",
+      "datasource": {"type": "prometheus", "uid": "p10-prometheus"},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8},
+      "fieldConfig": {
+        "defaults": {"unit": "ops", "min": 0},
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "rate(p10_collector_events_accepted_total{job=\"p10-collector\"}[$__rate_interval])",
+          "legendFormat": "Accepted"
+        },
+        {
+          "refId": "B",
+          "expr": "rate(p10_collector_events_invalid_total{job=\"p10-collector\"}[$__rate_interval])",
+          "legendFormat": "Invalid"
+        },
+        {
+          "refId": "C",
+          "expr": "rate(p10_collector_events_duplicate_total{job=\"p10-collector\"}[$__rate_interval])",
+          "legendFormat": "Duplicate"
+        },
+        {
+          "refId": "D",
+          "expr": "rate(p10_collector_events_buffer_full_total{job=\"p10-collector\"}[$__rate_interval])",
+          "legendFormat": "Buffer full"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "timeseries",
+      "title": "In-memory buffer utilization",
+      "datasource": {"type": "prometheus", "uid": "p10-prometheus"},
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 8},
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "min": 0,
+          "max": 100
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "100 * p10_collector_buffer_events{job=\"p10-collector\"} / p10_collector_buffer_capacity{job=\"p10-collector\"}",
+          "legendFormat": "Buffer utilization"
+        }
+      ]
+    }
+  ]
+}

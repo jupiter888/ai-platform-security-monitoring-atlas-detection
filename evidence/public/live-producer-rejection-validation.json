@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "checks": [
+    "missing credential rejected",
+    "unknown credential rejected",
+    "unauthenticated malformed content rejected before parsing",
+    "fixture cannot claim live gateway activity",
+    "fixture cannot claim live operator activity",
+    "gateway cannot claim operator source",
+    "operator cannot claim gateway source",
+    "all seven injections rejected without event acceptance"
+  ],
+  "responses": [
+    {
+      "label": "missing credential rejected",
+      "http_status": 401,
+      "body": {
+        "detail": "Producer authentication failed"
+      }
+    },
+    {
+      "label": "unknown credential rejected",
+      "http_status": 401,
+      "body": {
+        "detail": "Producer authentication failed"
+      }
+    },
+    {
+      "label": "unauthenticated malformed content rejected before parsing",
+      "http_status": 401,
+      "body": {
+        "detail": "Producer authentication failed"
+      }
+    },
+    {
+      "label": "fixture cannot claim live gateway activity",
+      "http_status": 403,
+      "body": {
+        "detail": "Producer authorization denied"
+      }
+    },
+    {
+      "label": "fixture cannot claim live operator activity",
+      "http_status": 403,
+      "body": {
+        "detail": "Producer authorization denied"
+      }
+    },
+    {
+      "label": "gateway cannot claim operator source",
+      "http_status": 403,
+      "body": {
+        "detail": "Producer authorization denied"
+      }
+    },
+    {
+      "label": "operator cannot claim gateway source",
+      "http_status": 403,
+      "body": {
+        "detail": "Producer authorization denied"
+      }
+    }
+  ],
+  "metrics_before": {
+    "p10_collector_producer_unauthorized_total": 0,
+    "p10_collector_producer_forbidden_total": 0,
+    "p10_collector_events_accepted_total": 6
+  },
+  "metrics_after": {
+    "p10_collector_producer_unauthorized_total": 3,
+    "p10_collector_producer_forbidden_total": 4,
+    "p10_collector_events_accepted_total": 6
+  }
+}

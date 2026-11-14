@@ -1,0 +1,5 @@
+PASS: unauthenticated finding retrieval rejected
+PASS: authenticated retrieval returns the validated finding
+PASS: repeat delivery returns an existing-record receipt
+PASS: original finding and receipt timestamp remain unchanged
+Finding receipt validation: 4/4 passed

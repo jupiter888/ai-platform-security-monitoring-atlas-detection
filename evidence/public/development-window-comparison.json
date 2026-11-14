@@ -1,0 +1,79 @@
+{
+  "analysis_type": "retrospective-development-comparison",
+  "live_configuration_changed": false,
+  "alerts_generated_by_this_script": false,
+  "baseline": {
+    "threshold": 20,
+    "window_seconds": 60
+  },
+  "candidate": {
+    "threshold": 30,
+    "window_seconds": 180
+  },
+  "scenarios": [
+    {
+      "scenario": "approved-research-batch",
+      "ground_truth": "benign",
+      "events_verified": 20,
+      "peak_requests_60_seconds": 20,
+      "peak_requests_180_seconds": 20,
+      "baseline_condition_met": true,
+      "candidate_condition_met": false,
+      "combined_condition_met": true
+    },
+    {
+      "scenario": "burst-model-replication",
+      "ground_truth": "adversarial-emulation",
+      "events_verified": 36,
+      "peak_requests_60_seconds": 36,
+      "peak_requests_180_seconds": 36,
+      "baseline_condition_met": true,
+      "candidate_condition_met": true,
+      "combined_condition_met": true
+    },
+    {
+      "scenario": "paced-model-replication",
+      "ground_truth": "adversarial-emulation",
+      "events_verified": 36,
+      "peak_requests_60_seconds": 18,
+      "peak_requests_180_seconds": 36,
+      "baseline_condition_met": false,
+      "candidate_condition_met": true,
+      "combined_condition_met": true
+    }
+  ],
+  "selected_scenario_results": {
+    "baseline": {
+      "true_positives": 1,
+      "false_positives": 1,
+      "true_negatives": 0,
+      "false_negatives": 1,
+      "precision": 0.5,
+      "recall": 0.5
+    },
+    "candidate_alone": {
+      "true_positives": 2,
+      "false_positives": 0,
+      "true_negatives": 1,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "combined": {
+      "true_positives": 2,
+      "false_positives": 1,
+      "true_negatives": 0,
+      "false_negatives": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0
+    }
+  },
+  "limitations": [
+    "Candidate selected after inspecting these development scenarios",
+    "Retrospective condition matching is not a historical live alert",
+    "Each scenario is evaluated in isolation",
+    "No representative or population-level performance claim",
+    "Held-out validation is still required",
+    "Longer windows do not establish intent"
+  ]
+}

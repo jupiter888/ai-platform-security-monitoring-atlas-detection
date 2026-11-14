@@ -1,0 +1,30 @@
+PASS: all 36 paced requests correlate to actual inference events
+Observed maximum requests in a 60-second window: 18
+{
+  "scenario": "paced-output-based-model-replication",
+  "ground_truth": "authorized-adversarial-emulation",
+  "requests_verified": 36,
+  "observed_peak_requests_per_60_seconds": 18,
+  "rule_threshold": 20,
+  "monitor_coverage": {
+    "coverage_complete": true,
+    "reason": "healthy_recorded_coverage",
+    "poll_count": 26,
+    "largest_poll_gap_seconds": 5.004947,
+    "maximum_allowed_gap_seconds": 10,
+    "suppression_observed": false
+  },
+  "matching_receiver_finding_ids": [],
+  "matching_outbox_finding_ids": [],
+  "assessment_status": "verified_selected_scenario_miss",
+  "operational_false_negative_for_declared_scenario": true,
+  "heldout_target_agreement": 0.75,
+  "majority_baseline_agreement": 0.5,
+  "limitations": [
+    "One deliberately selected paced scenario",
+    "Recorded healthy polls do not prove every internal operation",
+    "No complete extraction or population-level detection claim",
+    "The rule can behave as specified while missing adversarial activity"
+  ]
+}
+Paced-query assessment: verified selected-scenario miss

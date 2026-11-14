@@ -1,0 +1,13 @@
+{
+  "status": "approved_no_execution",
+  "finding_id": "3ef77e699efffcced22c2609af28ee2d57245ec7c89128030a27cbf397a3229a",
+  "response_executed": false,
+  "checks": [
+    "stored burst-replication finding matches the exercise target",
+    "analyst opens a separate investigation case",
+    "analyst requests containment",
+    "approver retrieves the fixed 60-second scope",
+    "distinct approver approves the persisted scope"
+  ],
+  "case_id": "3e1dbf59-84e8-4611-8b69-e0650535877f"
+}

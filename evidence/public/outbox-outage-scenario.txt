@@ -1,0 +1,29 @@
+PASS: four actual restricted-model requests denied
+PASS: four denials produce no DET-001 finding
+PASS: fifth actual restricted-model request denied
+PASS: five denials produce one evidence-linked DET-001 finding
+{
+  "finding_id": "63f1ef85d9a300abdf58583a218f271881a7522968ace7165bb407372ea6f5fc",
+  "rule_id": "DET-001",
+  "rule_version": "1.0",
+  "severity": "medium",
+  "classification": "repeated_model_access_denials",
+  "caller_ref": "lab-caller-reader",
+  "model": "restricted-model",
+  "event_count": 5,
+  "threshold": 5,
+  "window_seconds": 60,
+  "first_seen": "2026-11-12T20:02:15.496629+00:00",
+  "last_seen": "2026-11-12T20:02:16.534638+00:00",
+  "detected_at": "2026-11-12T20:02:17.558189+00:00",
+  "event_ids": [
+    "9c76dba4-c89b-4fe9-93d3-ac4e079c0f5b",
+    "be0a0296-2f7c-47e3-b452-1e4554ba4d4d",
+    "5fbf9698-4193-4aee-94e8-7d76e8d66f3c",
+    "658e512d-d4e4-4f29-b82b-a439157e79e0",
+    "a215cee8-41cf-4506-8aec-8be3e1e48171"
+  ]
+}
+Live model-access detection validation: 4/4 passed
+Mode: one-shot evaluation of an isolated live exercise window
+No continuous monitoring or notification delivery claimed

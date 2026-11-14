@@ -1,0 +1,61 @@
+{
+  "assessed_at": "2026-11-14T15:33:42.138651+00:00",
+  "status": "passed",
+  "scope": "Controlled existing-state restart using fresh runtime dependencies",
+  "persisted_acknowledgments": 16,
+  "model_version": "40c0ae79f1e5f4da",
+  "results": {
+    "restart_health": "8/8",
+    "fixture_to_loki": "3/3",
+    "actual_inference_monitoring": "8/8",
+    "operator_and_grafana": "8/8",
+    "case_and_history": "unchanged",
+    "grafana_stop_exit_code": 0,
+    "grafana_restart": "healthy with init enabled"
+  },
+  "evidence": [
+    {
+      "file": "service-restart-baseline.json",
+      "sha256": "5d02ec5f6bab83c3b695b62e89185e214f53b08486b501fbc844014d06c02f09"
+    },
+    {
+      "file": "service-shutdown-failure.json",
+      "sha256": "6053719bcd1969687b1aec92bb4789f740ba068abf74e99e846a0b1a3925f0f4"
+    },
+    {
+      "file": "service-restart-stopped.json",
+      "sha256": "247181bb32368da1c9355abc3d8ea6dd88a66398a9380877b3c5b586d4cf5231"
+    },
+    {
+      "file": "service-restart-health.json",
+      "sha256": "0bdeec2639010920393059aaef3bd9cef3f3d3eedcf5946e2eddb8d9fd6686cc"
+    },
+    {
+      "file": "post-restart-loki-delivery.txt",
+      "sha256": "e23c04565adf67a0ad1a018b80eb4e1a95fda884e5d02eff26228b672c860ecf"
+    },
+    {
+      "file": "post-restart-inference-monitoring.txt",
+      "sha256": "2cb15a42629adb3a1547c82429a3a5c5d4568d70849611abcffb3600f55e9bb3"
+    },
+    {
+      "file": "post-restart-operator-grafana-attempt-001.json",
+      "sha256": "7c82bfb91413d9077d618fa54589132856af7d83ca995ca184fcd903ee85b840"
+    },
+    {
+      "file": "post-restart-operator-grafana.json",
+      "sha256": "8330f10e5c92daab76a68bb4ddf039c303311d4318a35d07241555ecc96dccc8"
+    },
+    {
+      "file": "grafana-init-stop-validation.json",
+      "sha256": "0992c360e9005d840e99ace1045ae275601ff3fb676b5e0fdce80b989145e45d"
+    }
+  ],
+  "limitations": [
+    "Not first-use credential provisioning",
+    "Existing credentials, databases, and volumes were preserved",
+    "No frozen detection or containment experiment was rerun",
+    "One successful stop does not guarantee absence of future zombie-process failures",
+    "Container vulnerabilities and direct-Loki trust limitations remain unresolved"
+  ]
+}

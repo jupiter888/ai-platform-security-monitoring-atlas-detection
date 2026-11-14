@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-14T15:27:50.478280+00:00",
+  "status": "passed",
+  "scope": "Existing-state restart using freshly validated runtime dependencies",
+  "model_version": "40c0ae79f1e5f4da",
+  "persisted_acknowledgments": 16,
+  "pending_findings": 0,
+  "successful_poll_age_seconds": 4.803078889846802,
+  "healthy_scrapes": [
+    "p10-collector",
+    "p10-detector"
+  ],
+  "limitations": [
+    "Not first-use credential provisioning",
+    "Health checks do not establish end-to-end event delivery",
+    "Container vulnerabilities remain unresolved"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-11-14T15:31:09.280470+00:00",
+  "status": "passed",
+  "checks": [
+    "authenticated responder retrieves the preserved executed case",
+    "case content and transition history remain unchanged",
+    "operator read audit accepted by collector",
+    "unauthenticated Grafana data query rejected",
+    "Grafana retains all 16 provisioned panels",
+    "Grafana queries healthy detector scrape through Prometheus",
+    "Grafana retrieves the new correlated operator audit from Loki",
+    "stored audit follows the bounded contract without credential values"
+  ],
+  "case_id": "d71ebca9-39be-4a61-815f-e1265ec004aa",
+  "request_id": "4ed92a14-6200-4025-aae8-959be283764e",
+  "operator_event": {
+    "actor_ref": "lab-operator-responder",
+    "actor_role": "responder",
+    "case_ref": "d71ebca9-39be-4a61-815f-e1265ec004aa",
+    "collected_at": "2026-11-14T15:31:08.768239+00:00",
+    "event_id": "48a4943d-4254-4fb4-b775-e71b7d35a33f",
+    "event_time": "2026-11-14T15:31:08.766558+00:00",
+    "operation": "case_read",
+    "outcome": "allowed",
+    "provenance": "live-lab",
+    "reason": "operation_succeeded",
+    "request_id": "4ed92a14-6200-4025-aae8-959be283764e",
+    "schema_version": "operator/1.0",
+    "source": "operator"
+  },
+  "case_unchanged": true,
+  "response_executed_by_validation": false,
+  "scope": "Post-restart read-only operator audit and Grafana data paths",
+  "prior_incomplete_attempt": "post-restart-operator-grafana-attempt-001.json"
+}

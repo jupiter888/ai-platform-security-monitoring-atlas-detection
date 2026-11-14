@@ -1,0 +1,1123 @@
+{
+  "status": "traffic_completed",
+  "manifest_sha256": "d73eac2f56e2a7161c384d1dec5c5007a22842d87d3a3575d303628a96e5530b",
+  "started_at": "2026-11-13T18:32:21.961077+00:00",
+  "expected_model_version": "40c0ae79f1e5f4da",
+  "maximum_total_requests": 124,
+  "inference_requests_attempted": 124,
+  "post_traffic_observation_seconds": 20,
+  "scenarios": [
+    {
+      "scenario_id": "H01",
+      "name": "routine-research",
+      "ground_truth": "benign",
+      "status": "traffic_completed",
+      "started_at": "2026-11-13T18:32:21.996391+00:00",
+      "observations": [
+        {
+          "text": "Describe an experiment involving mineral composition of volcanic rocks.",
+          "request_id": "6d5989a0-b77e-45ec-8b54-7030e89a9291",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.3985105555152481
+        },
+        {
+          "text": "Explain the mechanisms behind mineral composition of volcanic rocks.",
+          "request_id": "f6d51983-cba7-4632-9963-2fcbce2dc8c1",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.463784490158696
+        },
+        {
+          "text": "Explain observations about photosynthesis in green leaves.",
+          "request_id": "f29699d7-8d5c-479d-baf1-1e703f02777c",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4482941603293762
+        },
+        {
+          "text": "Explain observations about planetary orbits around stars.",
+          "request_id": "b6c2ee9e-2616-476d-8e8f-c40053112427",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6179109431286469
+        },
+        {
+          "text": "Describe evidence concerning sediment erosion and rock layers.",
+          "request_id": "e137ed51-387c-42c3-9401-8904234215bb",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.6397713911864622
+        },
+        {
+          "text": "Discuss measurements related to sediment erosion and rock layers.",
+          "request_id": "bc4d5a38-a909-46fb-b14f-0b81c71c1e44",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.6585104069204569
+        },
+        {
+          "text": "Summarize the main features of stellar explosions and supernova light.",
+          "request_id": "104ad9c4-7b97-44ca-b0f0-dec50726aa07",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.5067611285544732
+        },
+        {
+          "text": "Summarize studies of stellar explosions and supernova light.",
+          "request_id": "89740225-7726-433a-aada-2965c407ee3f",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.4622952175774641
+        },
+        {
+          "text": "Outline an investigation of sediment erosion and rock layers.",
+          "request_id": "5b51abba-0511-40fd-81b2-3c201b3b5c97",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.6002295748179622
+        },
+        {
+          "text": "Identify research questions about sediment erosion and rock layers.",
+          "request_id": "57f5428d-7317-41cf-b584-dd10a2890b30",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.6397713911864622
+        },
+        {
+          "text": "Outline an investigation of comet motion through the solar system.",
+          "request_id": "5f13630e-5f55-4418-8fb8-880c16387c29",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6846189696036414
+        },
+        {
+          "text": "Summarize the main features of seed germination and stem growth.",
+          "request_id": "597bdbe0-79dd-4d2b-8bf4-a1ea590b0317",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.3581308655854604
+        }
+      ],
+      "traffic_completed_at": "2026-11-13T18:32:24.883716+00:00",
+      "observation_completed_at": "2026-11-13T18:32:44.888570+00:00"
+    },
+    {
+      "scenario_id": "H02",
+      "name": "approved-bulk-processing",
+      "ground_truth": "benign",
+      "status": "traffic_completed",
+      "started_at": "2026-11-13T18:35:54.912429+00:00",
+      "observations": [
+        {
+          "text": "Review scientific findings about tectonic plate movement near the mantle.",
+          "request_id": "e9a6d59e-7959-4bd0-99c1-ce28ce2043c5",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5284160978075553
+        },
+        {
+          "text": "Prepare a short overview of stellar explosions and supernova light.",
+          "request_id": "6cfe0419-6c76-4790-953a-adfbb6d638f5",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.4622952175774641
+        },
+        {
+          "text": "Discuss measurements related to mineral composition of volcanic rocks.",
+          "request_id": "997efb1c-30f2-4275-a3d8-66b6f4f0736d",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5228869493739702
+        },
+        {
+          "text": "Explain the mechanisms behind planetary orbits around stars.",
+          "request_id": "13a99970-d852-45f3-884c-30fe5b0948bd",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6469585600739776
+        },
+        {
+          "text": "Prepare a short overview of tectonic plate movement near the mantle.",
+          "request_id": "cd0129dc-5616-4ea2-8169-7bf2e5bd7722",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5102161209013784
+        },
+        {
+          "text": "Explain the mechanisms behind sediment erosion and rock layers.",
+          "request_id": "baca7dfe-275c-406d-8a69-e9bd1278300e",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.6360299597918003
+        },
+        {
+          "text": "Describe evidence concerning mineral composition of volcanic rocks.",
+          "request_id": "f2bc24ea-0ba4-47ff-9039-0faee354c7c2",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.48207671727197376
+        },
+        {
+          "text": "Prepare a short overview of photosynthesis in green leaves.",
+          "request_id": "06a1edd7-b198-4705-9ff1-b80c5a2b6883",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.3787330698458289
+        },
+        {
+          "text": "Explain the mechanisms behind seed germination and stem growth.",
+          "request_id": "b335eedf-319e-490f-a1b1-7745c8748038",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4073355618568614
+        },
+        {
+          "text": "Review scientific findings about mineral composition of volcanic rocks.",
+          "request_id": "1874069d-6327-4ba6-93f1-8da151ec4b72",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.48207671727197376
+        },
+        {
+          "text": "Explain the mechanisms behind comet motion through the solar system.",
+          "request_id": "8b86eb0c-08ad-4037-8d7c-47fd6b8f8f1e",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6551347857883966
+        },
+        {
+          "text": "Summarize studies of tectonic plate movement near the mantle.",
+          "request_id": "7b2d759f-ebfe-46db-beb4-4b23bfe922ef",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5102161209013784
+        },
+        {
+          "text": "Discuss measurements related to seed germination and stem growth.",
+          "request_id": "842d1b55-e6cd-4850-8804-881ae7361647",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.43383086521327424
+        },
+        {
+          "text": "Identify research questions about galaxy observations with telescopes.",
+          "request_id": "4da3e76c-6144-4842-9fa8-a4782f3b1e07",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.4548626391229188
+        },
+        {
+          "text": "Summarize studies of sediment erosion and rock layers.",
+          "request_id": "4423a919-7b39-4586-bfca-baf9d86dbb8b",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.6437065918467965
+        },
+        {
+          "text": "Describe evidence concerning seed germination and stem growth.",
+          "request_id": "5326d0eb-d414-47c8-8519-ecd2d14abd83",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4972101873431307
+        },
+        {
+          "text": "Identify research questions about comet motion through the solar system.",
+          "request_id": "3443fdc4-1a7d-41d4-ae48-d3d540452a55",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6516260897366054
+        },
+        {
+          "text": "Prepare a short overview of seed germination and stem growth.",
+          "request_id": "06fbae4d-fb14-4191-9667-10c4a5fffaed",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.41702883696534593
+        },
+        {
+          "text": "Identify research questions about photosynthesis in green leaves.",
+          "request_id": "ba0b5070-a892-4844-9932-1710b08db276",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4482941603293762
+        },
+        {
+          "text": "Identify research questions about mineral composition of volcanic rocks.",
+          "request_id": "5ee27c42-9e05-4043-91d1-00dad038bab9",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.48207671727197376
+        },
+        {
+          "text": "Summarize studies of seed germination and stem growth.",
+          "request_id": "55fe6069-651f-4b05-a9f8-5beda7891cca",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.41702883696534593
+        },
+        {
+          "text": "Explain observations about seed germination and stem growth.",
+          "request_id": "af02ba38-671e-4019-a3d7-50e3bd65e07b",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4972101873431307
+        },
+        {
+          "text": "Summarize the main features of water absorption by plant roots.",
+          "request_id": "798e5987-1a2e-4a06-b971-d74475672aef",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.3757533490557471
+        },
+        {
+          "text": "Outline an investigation of earthquake faults in the crust.",
+          "request_id": "6cebbcf8-719b-4edc-91c5-47819e8d1279",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5156133227691546
+        },
+        {
+          "text": "Identify research questions about stellar explosions and supernova light.",
+          "request_id": "285bb58b-d0d4-4595-a502-68ba0203fda4",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.41419275481896034
+        },
+        {
+          "text": "Discuss measurements related to flower pollination and pollen transfer.",
+          "request_id": "58a26841-6f2e-4d39-a4fd-c17dcb1ced9b",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.44686820871188143
+        },
+        {
+          "text": "Explain the mechanisms behind photosynthesis in green leaves.",
+          "request_id": "d2869cee-8864-4db4-99db-b59540c438fc",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.3687060743910987
+        },
+        {
+          "text": "Identify research questions about seed germination and stem growth.",
+          "request_id": "8ace1172-c1d0-46bc-8725-0e6eafd28e15",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4972101873431307
+        },
+        {
+          "text": "Outline an investigation of flower pollination and pollen transfer.",
+          "request_id": "209c99e0-3220-46e9-a2dc-7876d961c5a1",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.38730883835348584
+        },
+        {
+          "text": "Summarize the main features of flower pollination and pollen transfer.",
+          "request_id": "ba8f7736-2010-4df8-a32f-b34127afdff2",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.357905387036656
+        },
+        {
+          "text": "Identify research questions about earthquake faults in the crust.",
+          "request_id": "271624ca-0b34-49ca-b13f-be63cee6221b",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5699658878398679
+        },
+        {
+          "text": "Identify research questions about planetary orbits around stars.",
+          "request_id": "139c43e5-5f74-4d0f-a74a-ed1ccb9968af",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6179109431286469
+        },
+        {
+          "text": "Explain the mechanisms behind water absorption by plant roots.",
+          "request_id": "9d7fd7ba-daed-4823-a9da-81a230d2c5f4",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4272139149012476
+        },
+        {
+          "text": "Compare research on mineral composition of volcanic rocks.",
+          "request_id": "1061b660-e585-4f59-9f74-0abaa38ed86f",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.48207671727197376
+        },
+        {
+          "text": "Summarize the main features of sediment erosion and rock layers.",
+          "request_id": "50a87c40-c0ca-4334-8012-46f7bfea2259",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.6393808395314093
+        },
+        {
+          "text": "Describe evidence concerning comet motion through the solar system.",
+          "request_id": "9e07dd11-895d-4e42-93dd-40064d799bdf",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6516260897366054
+        },
+        {
+          "text": "Discuss measurements related to planetary orbits around stars.",
+          "request_id": "a9485b8b-69a6-4fe2-9adb-8f15d4c51e3b",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.5422059116991672
+        },
+        {
+          "text": "Discuss measurements related to water absorption by plant roots.",
+          "request_id": "f858b8d1-b5ff-4d97-9dcd-aa4052d75239",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4466221044389622
+        },
+        {
+          "text": "Review scientific findings about sediment erosion and rock layers.",
+          "request_id": "b1be3935-9c41-402e-a84d-34c735821a4e",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.6397713911864622
+        },
+        {
+          "text": "Explain observations about mineral composition of volcanic rocks.",
+          "request_id": "1ccfc421-e9da-40b2-9c2d-febeba97b35f",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.48207671727197376
+        }
+      ],
+      "traffic_completed_at": "2026-11-13T18:36:05.145741+00:00",
+      "observation_completed_at": "2026-11-13T18:36:25.151991+00:00"
+    },
+    {
+      "scenario_id": "H03",
+      "name": "burst-replication",
+      "ground_truth": "authorized-adversarial-emulation",
+      "status": "traffic_completed",
+      "started_at": "2026-11-13T18:40:00.252379+00:00",
+      "observations": [
+        {
+          "text": "Explain the mechanisms behind stellar explosions and supernova light.",
+          "request_id": "b96fa99c-67ea-46d1-b034-d59982286607",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.4697227541066412
+        },
+        {
+          "text": "Summarize studies of comet motion through the solar system.",
+          "request_id": "d588c900-75ac-475b-9437-c1e866e4db69",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6692402244610063
+        },
+        {
+          "text": "Describe an experiment involving sediment erosion and rock layers.",
+          "request_id": "37ddffc9-a265-441a-b8c3-680763f22a18",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5889683684390946
+        },
+        {
+          "text": "Outline an investigation of water absorption by plant roots.",
+          "request_id": "eec3915b-5429-42dc-8bde-1e96bc6b3ebe",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4017668142836526
+        },
+        {
+          "text": "Compare research on sediment erosion and rock layers.",
+          "request_id": "9b0f1910-d59b-4113-8c41-65fa80894bfc",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.6397713911864622
+        },
+        {
+          "text": "Describe an experiment involving flower pollination and pollen transfer.",
+          "request_id": "049e4274-6a25-490a-a241-faccf742d10a",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4503269752192099
+        },
+        {
+          "text": "Compare research on photosynthesis in green leaves.",
+          "request_id": "f46322bd-ee5e-4c7a-9a28-fe0c70abd3ef",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4482941603293762
+        },
+        {
+          "text": "Describe an experiment involving comet motion through the solar system.",
+          "request_id": "1ea37178-1813-4ff6-8ff2-13ec2563b5e4",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.668302879355064
+        },
+        {
+          "text": "Outline an investigation of galaxy observations with telescopes.",
+          "request_id": "ff4dbcea-0aab-49ee-88b0-e2ac511e59a0",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.5323583030157026
+        },
+        {
+          "text": "Describe evidence concerning planetary orbits around stars.",
+          "request_id": "2e0f1809-e1ed-4e53-98c2-2297008b5176",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6179109431286469
+        },
+        {
+          "text": "Describe an experiment involving seed germination and stem growth.",
+          "request_id": "8f667208-cab0-4d0f-b233-a28a1d7d397b",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4372684944865893
+        },
+        {
+          "text": "Compare research on tectonic plate movement near the mantle.",
+          "request_id": "4bd44014-0894-4444-ae4e-46784417fdf4",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5284160978075553
+        },
+        {
+          "text": "Describe evidence concerning photosynthesis in green leaves.",
+          "request_id": "81f22939-6985-41c9-9653-1b02a44040b2",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4482941603293762
+        },
+        {
+          "text": "Prepare a short overview of sediment erosion and rock layers.",
+          "request_id": "d319a9cc-565e-4ba1-ba02-f2c3b44b2e43",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.6437065918467965
+        },
+        {
+          "text": "Explain observations about stellar explosions and supernova light.",
+          "request_id": "cf0481ad-547b-4a5a-8e06-f7b20fa7782f",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.41419275481896034
+        },
+        {
+          "text": "Explain observations about flower pollination and pollen transfer.",
+          "request_id": "5da87d31-5acc-4323-af64-f05895d0d5b1",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.5130548710832626
+        },
+        {
+          "text": "Prepare a short overview of earthquake faults in the crust.",
+          "request_id": "6866f04f-fb7f-48ef-9cea-d87826fd4328",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5565451469489726
+        },
+        {
+          "text": "Outline an investigation of planetary orbits around stars.",
+          "request_id": "8146999f-51a9-49af-af76-44d5ba86e63f",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6516091463934082
+        },
+        {
+          "text": "Explain observations about comet motion through the solar system.",
+          "request_id": "e4520c63-9271-457b-990d-c48275c36e77",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6516260897366054
+        },
+        {
+          "text": "Review scientific findings about photosynthesis in green leaves.",
+          "request_id": "908808d4-2ee6-42c5-9454-25a077214f55",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4482941603293762
+        },
+        {
+          "text": "Summarize studies of flower pollination and pollen transfer.",
+          "request_id": "02bf0cb7-2167-4164-94cb-39d75ec11af4",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.43070423731668106
+        },
+        {
+          "text": "Describe evidence concerning tectonic plate movement near the mantle.",
+          "request_id": "ba00318b-fdcd-42e1-92e3-e8c491e00aa5",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5284160978075553
+        },
+        {
+          "text": "Review scientific findings about galaxy observations with telescopes.",
+          "request_id": "3c248f85-c760-447b-9d04-125ff87eef8a",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.4548626391229188
+        },
+        {
+          "text": "Summarize the main features of galaxy observations with telescopes.",
+          "request_id": "42362fef-c571-4932-8697-058417f64e88",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.5400021810058221
+        },
+        {
+          "text": "Summarize the main features of photosynthesis in green leaves.",
+          "request_id": "e5eb4b8c-91e3-4839-9f70-cf151b1c1cb4",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.3840070780784718
+        },
+        {
+          "text": "Explain the mechanisms behind earthquake faults in the crust.",
+          "request_id": "26f6f8d4-1edb-45b7-8615-c208e033cde4",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5575522699475463
+        },
+        {
+          "text": "Summarize studies of mineral composition of volcanic rocks.",
+          "request_id": "94f4038d-93a4-4576-a7eb-7eaeaa48538c",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.438005783716369
+        },
+        {
+          "text": "Compare research on galaxy observations with telescopes.",
+          "request_id": "7238eda8-a747-4649-9982-767e4e8b3b40",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.4548626391229188
+        },
+        {
+          "text": "Compare research on comet motion through the solar system.",
+          "request_id": "ae40b9c7-cb3a-48c5-99b2-03ee530a62cf",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6516260897366054
+        },
+        {
+          "text": "Explain observations about tectonic plate movement near the mantle.",
+          "request_id": "dd88b616-9566-4b41-b2c8-e84b0787d9c7",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5284160978075553
+        },
+        {
+          "text": "Prepare a short overview of mineral composition of volcanic rocks.",
+          "request_id": "954e62f6-fdfe-4ed6-8484-aebd89089bf1",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.438005783716369
+        },
+        {
+          "text": "Summarize the main features of planetary orbits around stars.",
+          "request_id": "b5d713ab-165a-41e4-9f82-25c0b1e763a0",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6620575567154029
+        },
+        {
+          "text": "Outline an investigation of tectonic plate movement near the mantle.",
+          "request_id": "c20d37b2-d59c-443c-b0d8-1eb1fd10e683",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.4593307971788417
+        },
+        {
+          "text": "Review scientific findings about earthquake faults in the crust.",
+          "request_id": "12f6b5dd-4e07-4bff-812a-d0771075e85e",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5699658878398679
+        },
+        {
+          "text": "Prepare a short overview of comet motion through the solar system.",
+          "request_id": "2cfdda07-51a7-4c38-990a-7535e27c4f9b",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6692402244610063
+        },
+        {
+          "text": "Outline an investigation of photosynthesis in green leaves.",
+          "request_id": "f536e65e-bb93-4e81-9a77-1da81cc9b61d",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.3858113804941777
+        }
+      ],
+      "traffic_completed_at": "2026-11-13T18:40:09.532218+00:00",
+      "replica_evaluation": {
+        "heldout_target_agreement": 0.75,
+        "majority_baseline_agreement": 0.5,
+        "replica_predictions": [
+          "botany",
+          "geology",
+          "astronomy",
+          "astronomy",
+          "astronomy",
+          "geology",
+          "geology",
+          "astronomy",
+          "geology",
+          "geology",
+          "astronomy",
+          "botany"
+        ],
+        "target_predictions": [
+          "astronomy",
+          "geology",
+          "geology",
+          "astronomy",
+          "astronomy",
+          "geology",
+          "geology",
+          "astronomy",
+          "geology",
+          "geology",
+          "astronomy",
+          "astronomy"
+        ],
+        "training_label_counts": {
+          "astronomy": 10,
+          "geology": 6,
+          "botany": 8
+        }
+      },
+      "observation_completed_at": "2026-11-13T18:40:29.552233+00:00"
+    },
+    {
+      "scenario_id": "H04",
+      "name": "paced-replication",
+      "ground_truth": "authorized-adversarial-emulation",
+      "status": "traffic_completed",
+      "started_at": "2026-11-13T18:43:39.583812+00:00",
+      "observations": [
+        {
+          "text": "Discuss measurements related to galaxy observations with telescopes.",
+          "request_id": "cb265409-05bf-43c8-bd12-bd1a98d678c9",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.3749057797492597
+        },
+        {
+          "text": "Outline an investigation of mineral composition of volcanic rocks.",
+          "request_id": "1f648252-ab57-4bd6-bfcf-4189b4d69fdc",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.41465280257404014
+        },
+        {
+          "text": "Review scientific findings about flower pollination and pollen transfer.",
+          "request_id": "019c4b22-8d5b-4947-a659-f80111d86f60",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.5130548710832626
+        },
+        {
+          "text": "Describe an experiment involving water absorption by plant roots.",
+          "request_id": "b971ce70-eab3-4e34-832e-45f2a85d67b5",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.45356613388770767
+        },
+        {
+          "text": "Review scientific findings about seed germination and stem growth.",
+          "request_id": "97281d8a-bed2-4163-b6be-9b663cf33bcd",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.4972101873431307
+        },
+        {
+          "text": "Describe evidence concerning water absorption by plant roots.",
+          "request_id": "5f0bd259-2eb7-4d6b-b5ef-97de2e275d17",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.49636760970680965
+        },
+        {
+          "text": "Describe an experiment involving planetary orbits around stars.",
+          "request_id": "b751daae-008a-47d3-ad3e-020efcadf023",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6325292235891765
+        },
+        {
+          "text": "Explain observations about sediment erosion and rock layers.",
+          "request_id": "fae6bec5-dd82-4d3f-a909-06ee566b8756",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.6397713911864622
+        },
+        {
+          "text": "Explain the mechanisms behind galaxy observations with telescopes.",
+          "request_id": "aa09d5f6-338e-4435-b8c8-19c81b081a62",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.5101132694426599
+        },
+        {
+          "text": "Prepare a short overview of galaxy observations with telescopes.",
+          "request_id": "4d18051e-03f9-4123-934f-19d56e77a10a",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.4984575349966805
+        },
+        {
+          "text": "Review scientific findings about planetary orbits around stars.",
+          "request_id": "4ca652aa-54e1-4d11-b05c-f06516deefc0",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6179109431286469
+        },
+        {
+          "text": "Summarize the main features of tectonic plate movement near the mantle.",
+          "request_id": "79940a3e-e873-4944-9f01-57ae231a0d68",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.49561102922286965
+        },
+        {
+          "text": "Compare research on earthquake faults in the crust.",
+          "request_id": "fa03967c-9fd8-454b-9d62-77e8b3eecb11",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5699658878398679
+        },
+        {
+          "text": "Summarize studies of earthquake faults in the crust.",
+          "request_id": "6af108f9-577a-48cc-b6b0-4bbb691ed158",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5565451469489726
+        },
+        {
+          "text": "Explain the mechanisms behind flower pollination and pollen transfer.",
+          "request_id": "7a1a8301-7eba-4478-ac81-0e2a5baf6807",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.42133914421104895
+        },
+        {
+          "text": "Summarize studies of photosynthesis in green leaves.",
+          "request_id": "eeb8586f-a41e-4930-92fd-1b3e5c2b89ea",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.3787330698458289
+        },
+        {
+          "text": "Describe evidence concerning galaxy observations with telescopes.",
+          "request_id": "716c6cf2-dccd-40f7-9549-5cd76992d952",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.4548626391229188
+        },
+        {
+          "text": "Summarize the main features of mineral composition of volcanic rocks.",
+          "request_id": "e40e9077-d090-4dd7-95c6-75dbe52cc908",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.43080870921912895
+        },
+        {
+          "text": "Describe an experiment involving tectonic plate movement near the mantle.",
+          "request_id": "64154fee-62ec-4a40-9019-f8c62ddb7088",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.47221239669379517
+        },
+        {
+          "text": "Describe evidence concerning flower pollination and pollen transfer.",
+          "request_id": "e0be26b2-3ed4-49a0-b958-2b03e9f9e03d",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.5130548710832626
+        },
+        {
+          "text": "Outline an investigation of stellar explosions and supernova light.",
+          "request_id": "ea2ac410-7218-4f51-9109-5ea2792fdbdf",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.5015600497618037
+        },
+        {
+          "text": "Prepare a short overview of planetary orbits around stars.",
+          "request_id": "fcc06a85-f328-4deb-9b5f-39af5d07bb48",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6372757937491657
+        },
+        {
+          "text": "Describe an experiment involving galaxy observations with telescopes.",
+          "request_id": "8eb856f1-407c-4298-ab85-54f09c41ef3d",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.4976500364689284
+        },
+        {
+          "text": "Review scientific findings about stellar explosions and supernova light.",
+          "request_id": "be71f573-ac8d-4ae0-9d35-5e5d7aaba949",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.41419275481896034
+        },
+        {
+          "text": "Compare research on flower pollination and pollen transfer.",
+          "request_id": "3ef00b93-7a66-42f4-910c-24ab17aa276b",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.5130548710832626
+        },
+        {
+          "text": "Prepare a short overview of flower pollination and pollen transfer.",
+          "request_id": "f58e3ac3-a270-4960-aaa5-834c9d5b01ac",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.43070423731668106
+        },
+        {
+          "text": "Summarize the main features of comet motion through the solar system.",
+          "request_id": "67e631ba-b1a6-40c1-b41d-4f74fa82ef68",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6717419954148055
+        },
+        {
+          "text": "Outline an investigation of seed germination and stem growth.",
+          "request_id": "d29e06a3-8c3e-47a7-9633-a9890db70d35",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.37589285209100093
+        },
+        {
+          "text": "Discuss measurements related to photosynthesis in green leaves.",
+          "request_id": "019ce439-4887-437a-ace8-c74ef30cec75",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.39801705458545084
+        },
+        {
+          "text": "Review scientific findings about water absorption by plant roots.",
+          "request_id": "05f39d27-7483-4c89-afd0-c8e187794226",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "botany",
+          "score": 0.49636760970680965
+        },
+        {
+          "text": "Describe evidence concerning stellar explosions and supernova light.",
+          "request_id": "eacaa8f6-3776-41f8-93aa-c62410ac4f13",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.41419275481896034
+        },
+        {
+          "text": "Discuss measurements related to comet motion through the solar system.",
+          "request_id": "41cc94b5-f3cf-4218-9863-3f1e69cad4a9",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.6075782308006152
+        },
+        {
+          "text": "Describe an experiment involving stellar explosions and supernova light.",
+          "request_id": "4f1a2f94-3353-40bf-9cc3-96be4b378a64",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.4631970956732711
+        },
+        {
+          "text": "Discuss measurements related to tectonic plate movement near the mantle.",
+          "request_id": "bf45a8aa-36e0-430e-bef6-1a5b0cb48c2f",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5605643401186977
+        },
+        {
+          "text": "Discuss measurements related to stellar explosions and supernova light.",
+          "request_id": "ecc0ca82-921b-4410-9fe2-9f8df8c5752b",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "astronomy",
+          "score": 0.370162270750198
+        },
+        {
+          "text": "Identify research questions about tectonic plate movement near the mantle.",
+          "request_id": "428eb091-b7c6-4fe1-a7aa-fdf515dbf2a6",
+          "model": "research-model",
+          "model_version": "40c0ae79f1e5f4da",
+          "label": "geology",
+          "score": 0.5284160978075553
+        }
+      ],
+      "traffic_completed_at": "2026-11-13T18:45:42.623704+00:00",
+      "replica_evaluation": {
+        "heldout_target_agreement": 0.75,
+        "majority_baseline_agreement": 0.4166666666666667,
+        "replica_predictions": [
+          "botany",
+          "botany",
+          "geology",
+          "astronomy",
+          "astronomy",
+          "botany",
+          "astronomy",
+          "astronomy",
+          "astronomy",
+          "geology",
+          "astronomy",
+          "geology"
+        ],
+        "target_predictions": [
+          "botany",
+          "botany",
+          "astronomy",
+          "botany",
+          "botany",
+          "botany",
+          "astronomy",
+          "astronomy",
+          "astronomy",
+          "geology",
+          "astronomy",
+          "geology"
+        ],
+        "training_label_counts": {
+          "astronomy": 11,
+          "botany": 7,
+          "geology": 6
+        }
+      },
+      "observation_completed_at": "2026-11-13T18:46:02.641973+00:00"
+    }
+  ],
+  "detection_outcome": "not-yet-assessed",
+  "completed_at": "2026-11-13T18:46:02.644584+00:00"
+}

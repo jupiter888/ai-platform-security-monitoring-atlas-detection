@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "checks": [
+    "Grafana provisions all 16 panels including the four additions",
+    "Authentication decisions \u00b7 rolling 1 minute returns data through Grafana",
+    "Inference admission rejections \u00b7 rolling 1 minute returns data through Grafana",
+    "Operator decisions \u00b7 rolling 1 minute returns data through Grafana",
+    "Operator audit trail returns data through Grafana"
+  ],
+  "panels": [
+    {
+      "title": "Authentication decisions \u00b7 rolling 1 minute",
+      "frame_count": 2,
+      "query_succeeded": true
+    },
+    {
+      "title": "Inference admission rejections \u00b7 rolling 1 minute",
+      "frame_count": 1,
+      "query_succeeded": true
+    },
+    {
+      "title": "Operator decisions \u00b7 rolling 1 minute",
+      "frame_count": 5,
+      "query_succeeded": true
+    },
+    {
+      "title": "Operator audit trail",
+      "frame_count": 1,
+      "query_succeeded": true
+    }
+  ]
+}

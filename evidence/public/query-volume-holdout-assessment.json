@@ -1,0 +1,322 @@
+{
+  "evaluation_type": "frozen-heldout-local-verification",
+  "manifest_sha256": "d73eac2f56e2a7161c384d1dec5c5007a22842d87d3a3575d303628a96e5530b",
+  "requests_verified": 124,
+  "scenarios": [
+    {
+      "scenario_id": "H01",
+      "name": "routine-research",
+      "ground_truth": "benign",
+      "events_verified": 12,
+      "assessment_status": "assessed",
+      "monitor_coverage": {
+        "coverage_complete": true,
+        "reason": "healthy_recorded_coverage",
+        "poll_count": 7,
+        "largest_poll_gap_seconds": 5.004759,
+        "maximum_allowed_gap_seconds": 10,
+        "suppression_observed": false
+      },
+      "prior_suppression_state_clear": true,
+      "rules": {
+        "DET-002": {
+          "peak_window_count": 12,
+          "threshold": 20,
+          "window_seconds": 60,
+          "condition_met": false,
+          "finding_queued": false,
+          "finding_delivered": false,
+          "finding_ids": [],
+          "threshold_to_detection_seconds": null,
+          "threshold_to_receiver_storage_seconds": null
+        },
+        "DET-003": {
+          "peak_window_count": 12,
+          "threshold": 30,
+          "window_seconds": 180,
+          "condition_met": false,
+          "finding_queued": false,
+          "finding_delivered": false,
+          "finding_ids": [],
+          "threshold_to_detection_seconds": null,
+          "threshold_to_receiver_storage_seconds": null
+        }
+      },
+      "replica_evaluation": null
+    },
+    {
+      "scenario_id": "H02",
+      "name": "approved-bulk-processing",
+      "ground_truth": "benign",
+      "events_verified": 40,
+      "assessment_status": "assessed",
+      "monitor_coverage": {
+        "coverage_complete": true,
+        "reason": "healthy_recorded_coverage",
+        "poll_count": 8,
+        "largest_poll_gap_seconds": 5.0046,
+        "maximum_allowed_gap_seconds": 10,
+        "suppression_observed": true
+      },
+      "prior_suppression_state_clear": true,
+      "rules": {
+        "DET-002": {
+          "peak_window_count": 40,
+          "threshold": 20,
+          "window_seconds": 60,
+          "condition_met": true,
+          "finding_queued": true,
+          "finding_delivered": true,
+          "finding_ids": [
+            "c18d9e4ec39fd17c7c1efed232b37a69024a3fb7c259d9cb651e251fe22a4517"
+          ],
+          "threshold_to_detection_seconds": 4.925134,
+          "threshold_to_receiver_storage_seconds": 4.950233
+        },
+        "DET-003": {
+          "peak_window_count": 40,
+          "threshold": 30,
+          "window_seconds": 180,
+          "condition_met": true,
+          "finding_queued": true,
+          "finding_delivered": true,
+          "finding_ids": [
+            "d09e49cf374eb9d6cbdee7c394c55c5ced3dae07811151c057f181edf5a06b88"
+          ],
+          "threshold_to_detection_seconds": 2.299887,
+          "threshold_to_receiver_storage_seconds": 2.334215
+        }
+      },
+      "replica_evaluation": null
+    },
+    {
+      "scenario_id": "H03",
+      "name": "burst-replication",
+      "ground_truth": "authorized-adversarial-emulation",
+      "events_verified": 36,
+      "assessment_status": "assessed",
+      "monitor_coverage": {
+        "coverage_complete": true,
+        "reason": "healthy_recorded_coverage",
+        "poll_count": 7,
+        "largest_poll_gap_seconds": 5.004702,
+        "maximum_allowed_gap_seconds": 10,
+        "suppression_observed": true
+      },
+      "prior_suppression_state_clear": true,
+      "rules": {
+        "DET-002": {
+          "peak_window_count": 36,
+          "threshold": 20,
+          "window_seconds": 60,
+          "condition_met": true,
+          "finding_queued": true,
+          "finding_delivered": true,
+          "finding_ids": [
+            "24532175503735c38a4fb6ed370dacd9814cda8652bed42188c30ca235a2ad14"
+          ],
+          "threshold_to_detection_seconds": 4.670977,
+          "threshold_to_receiver_storage_seconds": 4.696918
+        },
+        "DET-003": {
+          "peak_window_count": 36,
+          "threshold": 30,
+          "window_seconds": 180,
+          "condition_met": true,
+          "finding_queued": true,
+          "finding_delivered": true,
+          "finding_ids": [
+            "e65b72eae915eb1b01a06b0c9037bb4edd7d0c2d4b2bceec3f6976879c66ad7d"
+          ],
+          "threshold_to_detection_seconds": 2.035176,
+          "threshold_to_receiver_storage_seconds": 2.071692
+        }
+      },
+      "replica_evaluation": {
+        "heldout_target_agreement": 0.75,
+        "majority_baseline_agreement": 0.5,
+        "replica_predictions": [
+          "botany",
+          "geology",
+          "astronomy",
+          "astronomy",
+          "astronomy",
+          "geology",
+          "geology",
+          "astronomy",
+          "geology",
+          "geology",
+          "astronomy",
+          "botany"
+        ],
+        "target_predictions": [
+          "astronomy",
+          "geology",
+          "geology",
+          "astronomy",
+          "astronomy",
+          "geology",
+          "geology",
+          "astronomy",
+          "geology",
+          "geology",
+          "astronomy",
+          "astronomy"
+        ],
+        "training_label_counts": {
+          "astronomy": 10,
+          "geology": 6,
+          "botany": 8
+        }
+      }
+    },
+    {
+      "scenario_id": "H04",
+      "name": "paced-replication",
+      "ground_truth": "authorized-adversarial-emulation",
+      "events_verified": 36,
+      "assessment_status": "assessed",
+      "monitor_coverage": {
+        "coverage_complete": true,
+        "reason": "healthy_recorded_coverage",
+        "poll_count": 31,
+        "largest_poll_gap_seconds": 5.008824,
+        "maximum_allowed_gap_seconds": 10,
+        "suppression_observed": true
+      },
+      "prior_suppression_state_clear": true,
+      "rules": {
+        "DET-002": {
+          "peak_window_count": 18,
+          "threshold": 20,
+          "window_seconds": 60,
+          "condition_met": false,
+          "finding_queued": false,
+          "finding_delivered": false,
+          "finding_ids": [],
+          "threshold_to_detection_seconds": null,
+          "threshold_to_receiver_storage_seconds": null
+        },
+        "DET-003": {
+          "peak_window_count": 36,
+          "threshold": 30,
+          "window_seconds": 180,
+          "condition_met": true,
+          "finding_queued": true,
+          "finding_delivered": true,
+          "finding_ids": [
+            "1f12d2382ef8e2fb9ad5f47e9070ff9884a00ba824b551309ca2e3d95971534b"
+          ],
+          "threshold_to_detection_seconds": 3.640283,
+          "threshold_to_receiver_storage_seconds": 3.660615
+        }
+      },
+      "replica_evaluation": {
+        "heldout_target_agreement": 0.75,
+        "majority_baseline_agreement": 0.4166666666666667,
+        "replica_predictions": [
+          "botany",
+          "botany",
+          "geology",
+          "astronomy",
+          "astronomy",
+          "botany",
+          "astronomy",
+          "astronomy",
+          "astronomy",
+          "geology",
+          "astronomy",
+          "geology"
+        ],
+        "target_predictions": [
+          "botany",
+          "botany",
+          "astronomy",
+          "botany",
+          "botany",
+          "botany",
+          "astronomy",
+          "astronomy",
+          "astronomy",
+          "geology",
+          "astronomy",
+          "geology"
+        ],
+        "training_label_counts": {
+          "astronomy": 11,
+          "botany": 7,
+          "geology": 6
+        }
+      }
+    }
+  ],
+  "selected_scenario_results": {
+    "finding_queued": {
+      "DET-002": {
+        "true_positives": 1,
+        "false_positives": 1,
+        "true_negatives": 1,
+        "false_negatives": 1,
+        "inconclusive_scenarios_excluded": 0,
+        "precision": 0.5,
+        "recall": 0.5
+      },
+      "DET-003": {
+        "true_positives": 2,
+        "false_positives": 1,
+        "true_negatives": 1,
+        "false_negatives": 0,
+        "inconclusive_scenarios_excluded": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0
+      },
+      "combined": {
+        "true_positives": 2,
+        "false_positives": 1,
+        "true_negatives": 1,
+        "false_negatives": 0,
+        "inconclusive_scenarios_excluded": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0
+      }
+    },
+    "finding_delivered": {
+      "DET-002": {
+        "true_positives": 1,
+        "false_positives": 1,
+        "true_negatives": 1,
+        "false_negatives": 1,
+        "inconclusive_scenarios_excluded": 0,
+        "precision": 0.5,
+        "recall": 0.5
+      },
+      "DET-003": {
+        "true_positives": 2,
+        "false_positives": 1,
+        "true_negatives": 1,
+        "false_negatives": 0,
+        "inconclusive_scenarios_excluded": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0
+      },
+      "combined": {
+        "true_positives": 2,
+        "false_positives": 1,
+        "true_negatives": 1,
+        "false_negatives": 0,
+        "inconclusive_scenarios_excluded": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0
+      }
+    }
+  },
+  "limitations": [
+    "Four deterministic scenarios, not a representative benchmark",
+    "New scenario instances use related synthetic vocabulary",
+    "Ground truth describes authorized laboratory objectives",
+    "Detection and receiver delivery are measured separately",
+    "Latency starts when the collection-time threshold is crossed",
+    "Recorded monitor coverage cannot prove every internal operation",
+    "No production detection-performance claim"
+  ]
+}

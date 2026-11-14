@@ -1,0 +1,7 @@
+PASS: checkpoint records the pending finding
+PASS: original persisted finding is acknowledged as delivered
+PASS: delivery occurred after the source-event window expired
+PASS: authenticated receiver record matches the original finding
+Persisted delivery attempts: 18
+Outbox recovery validation: 4/4 passed
+Scope: queued-finding recovery; not offline detection coverage

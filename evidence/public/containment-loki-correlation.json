@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "case_id": "3e1dbf59-84e8-4611-8b69-e0650535877f",
+  "scope": "five actual inference requests from the containment exercise",
+  "correlations": [
+    {
+      "observation": "Reader baseline",
+      "http_status": 200,
+      "request_id": "2be2e30b-437b-4a19-9f89-4ff0e8c4b874",
+      "event_id": "5d3f9dae-a0fb-480c-adbe-6ba8ee5bc15c",
+      "reason": "inference_succeeded",
+      "outcome": "allowed",
+      "caller_ref": "lab-caller-reader",
+      "model": "research-model"
+    },
+    {
+      "observation": "Admin baseline",
+      "http_status": 200,
+      "request_id": "617684ac-c570-470b-9198-98ee6046b259",
+      "event_id": "930c2179-2a72-45d2-ab56-69acb80acbb5",
+      "reason": "inference_succeeded",
+      "outcome": "allowed",
+      "caller_ref": "lab-caller-admin",
+      "model": "restricted-model"
+    },
+    {
+      "observation": "Reader during containment",
+      "http_status": 403,
+      "request_id": "4eea9185-aa24-46f8-8977-9579fbaa9ffa",
+      "event_id": "c5dec01a-15d8-4f31-9f98-fb606c307332",
+      "reason": "containment_enforced",
+      "outcome": "denied",
+      "caller_ref": "lab-caller-reader",
+      "model": "research-model"
+    },
+    {
+      "observation": "Admin during containment",
+      "http_status": 200,
+      "request_id": "6e54955f-762e-4fde-b07f-4cbbee8d75a6",
+      "event_id": "81f328dc-4621-4f18-b0b1-ab775bad6ae7",
+      "reason": "inference_succeeded",
+      "outcome": "allowed",
+      "caller_ref": "lab-caller-admin",
+      "model": "restricted-model"
+    },
+    {
+      "observation": "Reader after expiry",
+      "http_status": 200,
+      "request_id": "6841ab7b-9256-480d-83b4-d1bc866c96dc",
+      "event_id": "a564c70d-7f37-452f-ba29-610ee6a3f5f6",
+      "reason": "inference_succeeded",
+      "outcome": "allowed",
+      "caller_ref": "lab-caller-reader",
+      "model": "research-model"
+    }
+  ],
+  "limitations": [
+    "Request correlation does not prove tamper-resistant logging",
+    "Operator authorization attempts are recorded in the exercise report",
+    "This check does not establish operator-attempt ingestion into Loki"
+  ]
+}

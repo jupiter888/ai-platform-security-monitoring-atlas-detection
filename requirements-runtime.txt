@@ -1,0 +1,4 @@
+# Project 10 — Runtime dependencies
+scikit-learn==1.9.1
+fastapi==0.162.5
+uvicorn==0.54.0

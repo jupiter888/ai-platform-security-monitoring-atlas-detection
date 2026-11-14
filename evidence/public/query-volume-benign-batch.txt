@@ -1,0 +1,18 @@
+PASS: successful-query window is clear
+PASS: 19 actual model predictions completed
+PASS: 19 successful requests produce no DET-002 finding
+PASS: twentieth actual model prediction completed
+PASS: 20 successful requests produce an evidence-linked finding
+PASS: continuous monitor delivered DET-002 to durable storage
+{
+  "scenario": "approved-research-batch",
+  "ground_truth": "benign",
+  "successful_predictions": 20,
+  "rule_id": "DET-002",
+  "finding_id": "db5fa6f1f809d3d9b27fb4fffd0f4cc016bd4fa14b431fba4356282ebc8859a7",
+  "rule_condition_met": true,
+  "operational_false_positive_observed": true,
+  "interpretation": "The volume condition was detected correctly, but volume alone did not distinguish approved activity from abuse."
+}
+Live query-volume validation: 6/6 passed
+Scope: one controlled benign batch; no population-level rate claim

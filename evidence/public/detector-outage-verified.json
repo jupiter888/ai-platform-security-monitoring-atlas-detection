@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "scope": "verified detector process outage; no attack traffic generated",
+  "observations": [
+    {
+      "observed_at": "2026-11-13T21:17:13.898091+00:00",
+      "scrape_values": [
+        "0"
+      ],
+      "freshness_values": []
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "checked_at": "2026-11-14T15:13:41.558425+00:00",
+  "transformation": "Local home-directory prefix replaced with <HOME>",
+  "originals_preserved_privately": true,
+  "files": [
+    {
+      "file": "admission-pressure-regression.txt",
+      "original_sha256": "52e65899552c3185fec8dfaa57da25c528bd31e1393fd3c207219a5131d14755",
+      "sanitized_sha256": "736ec4aa339826d1827b929c3caca506b7bb77152ba0b73c4e277b8d39cab1dc",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "authenticated-publishers-regression.txt",
+      "original_sha256": "c37e9cfbb65fd66a3c1322da09ab30118242d31ef483842ed56e08e49cf8a04c",
+      "sanitized_sha256": "f39acdf2dcd9cf9ccf8012e5d8adb130408ae6dddb5ee6d17a8468121b93d9bb",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "authentication-detection-regression.txt",
+      "original_sha256": "1672623e9ced19137750250cc4bc72c7a1d7f22660fc712775b77a9fc06d9f02",
+      "sanitized_sha256": "2ac0597e530b7e0c28d9ba4a0015b85f9e4df8d7e5045f0e1848b1212f67e952",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "authentication-disposition-regression.txt",
+      "original_sha256": "92fea7f460eb4f1bb8300dfeb570aebc18273aedeb4c8ae58364cd2d4d32ceb2",
+      "sanitized_sha256": "2be60d5be0cdd6f4a991b05ec1199bc38f1508d9a2127ee9ccd5fb9117a33c96",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "authentication-monitor-regression.txt",
+      "original_sha256": "70532ecb207432f1b0e10df92c2c03a143a58fcf74dcd2a509439b4375dd32fd",
+      "sanitized_sha256": "c44d6f858e4402cd999d3eae294bc7bc3a263e19c00d583f74351ba9179b6889",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "case-workflow-regression.txt",
+      "original_sha256": "772eea4946f25333ad58983717eca7606f7a4dccb3405027d83043560a107ade",
+      "sanitized_sha256": "0c54b4540532e7f90f62cb78cb35277c49decb6570654a9fbc9f4faab62e84ea",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "collector-producer-enforcement-regression.txt",
+      "original_sha256": "ef3c7c66db7e959e50324ddba9a34b751eaac0b888ce3f286fdd5f968db16c50",
+      "sanitized_sha256": "cdec45812e7723cffb99806a60aa55f97ebcfb7681306656d4250bab2254ee5b",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "containment-regression.txt",
+      "original_sha256": "6b10fc9e9f6d689b80b422c28f5e0811af46792c6d9666aa33e4c33ddf2f6498",
+      "sanitized_sha256": "d9d15802ea02ce367826876b44710b3261be35c6becfa3ab89821fc3244fcc6f",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "detection-regression.txt",
+      "original_sha256": "25e2b2764969fcebecc21f438d100765deeb4a9978d6769d7e56d81e5a12edee",
+      "sanitized_sha256": "07eaf1e35a00864864dc3cb7d99bd51dda33386e75da0b50299f2941009dfa42",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "detector-metrics-regression.txt",
+      "original_sha256": "3b08ca24f912846e389e09b9f1b2510a9f11e8e7ad9f10aa0541eb9e678eb42e",
+      "sanitized_sha256": "09f7d03869220503c5ca4a91ee7e1d88675ed2c649ec28883a7eb0e785eaefd6",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "inference-admission-regression.txt",
+      "original_sha256": "e7d63fcc09d873f15c75871b697efe90049c00e4a9a8f9a59297eded0ef45423",
+      "sanitized_sha256": "29e639164ee44f4cbcbdc1c5853eb7cce84e142b8d79d2457f6d0b8766f714b5",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "inference-containment-regression.txt",
+      "original_sha256": "c7421ad11d81aeee2c1291fea502ea7d4bb9711f348b388cb843e9b5e160783d",
+      "sanitized_sha256": "b51fa251f48e244eef79026fd218e0046b5fa32c6aeafd36b3a901028b55c7b4",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "multirule-regression.txt",
+      "original_sha256": "d099e714ab3776670bbb4a82d025e8a41b4b95b1f7db021d88a36b2b01bdefa1",
+      "sanitized_sha256": "92662477cc87fe1b58673b5f2895efdcaef818ebf43577f0526c4255d7b52943",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "operator-api-regression.txt",
+      "original_sha256": "02a49935a4077feb4222d0a60fa8bddbe5823fa33d9a2b7f37bf0e44b929c67a",
+      "sanitized_sha256": "68373b651ebc5353edc7172bb68029265a408ef782190e69ed3abf78be11b17e",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "operator-audit-regression.txt",
+      "original_sha256": "bcd85e916f99d03bb4ffcabbef34aaa434156e442dddd260c2f1915995f1aaf0",
+      "sanitized_sha256": "21d12300d4e7728b2cc0e09935a8ad6b1435dd6691787fc2a7382d4d02318884",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "operator-detection-regression.txt",
+      "original_sha256": "4e26a9d07dd58e4c3ce38705befe2056f55fcd8eb4f846ad0e65d61a3eb67983",
+      "sanitized_sha256": "6a2fad8eb6a917b064b03dc0e3706b2166daa510aa9c006bf8c4d79e392aea8e",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "operator-event-contract-regression.txt",
+      "original_sha256": "7f035791c11017ab4558ef74e2855eb93615bcbe910e940d161ad277266b89ad",
+      "sanitized_sha256": "623e85f373f3fc1564ba19ef41e1ca0ee1880df57614cc6273502941d860d9d0",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "operator-execution-regression.txt",
+      "original_sha256": "8a964d1bb5127e09007f7022fc590380b9d7055f2e4c7e27728558c591a027a0",
+      "sanitized_sha256": "87b020b75d1d4466afb606a5588dd93dd23b95036eba0cb22b3c08f5c4dcfa3c",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "operator-publisher-regression.txt",
+      "original_sha256": "d299617a8d45b34574d118c9c59837652ca720d9372e9b14c37607c17bf8945a",
+      "sanitized_sha256": "0360c77baefd18545f7e826333ce21c178a0303dd663f362e9c4f78fb96ffb06",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "outbox-regression.txt",
+      "original_sha256": "ed087d262c697b288d6f6b6dce1eabfd41017411c686dc9412d91553b7d9df9b",
+      "sanitized_sha256": "c18f68ca0d3b9e8d6218eef6cde91bb8d0bbd7ee961d50c03ae8ca22445632ae",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "packaging-remediation-regression.txt",
+      "original_sha256": "966ad54005bb4ba1ee1acbd23857372315ba726a374da796b3113f196c21b2c2",
+      "sanitized_sha256": "ea32b5a14666e7736b9c2b5bca12576ce39a9cbfaa1e22e452c30552b82f0768",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "producer-auth-regression.txt",
+      "original_sha256": "7d26541d92a6843a67304102356f0e2bf57705b6f4366baff089f05706031310",
+      "sanitized_sha256": "486ee00208dc16978c68070f48d04f0b6ea93c9e3cca2a79dbd7840bcbc78c76",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "query-volume-regression.txt",
+      "original_sha256": "d031440ba1429d80089c0e8c314e4665c24e0ef83e68c3c053240e0879abf55c",
+      "sanitized_sha256": "9e7de3f7b01c551b9eb04b5c3877be8d5476964775a6da3995bd6ceca0d6ae02",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "sustained-query-regression.txt",
+      "original_sha256": "76e4418d491f5ca7a486b64e7e783ffa928758dea5584c6f82349e802aed0512",
+      "sanitized_sha256": "71330848efa694d01be719d6a3098dcb41be2ae7bf8929c5050028ae6677559b",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "telemetry-coverage-limits-regression.txt",
+      "original_sha256": "91ffedee5bb40646cb6b2ad7f53a49d2fd833953ad22ae1e6f4a47377ece1ca4",
+      "sanitized_sha256": "3b3ffe7f8e941e7ea5dcb828155dbe60da18930814aca94973f6895e71229218",
+      "home_prefix_replacements": 1
+    },
+    {
+      "file": "telemetry-time-policy-regression.txt",
+      "original_sha256": "25d9d3ac41ba7da8a340dd8d2b6fd15f30faab6f683b21746c8f8e48adb126a1",
+      "sanitized_sha256": "31131f215555d0ba364f1dbe090ff68d78168a16c766dcdc414ebc1e6b429478",
+      "home_prefix_replacements": 1
+    }
+  ],
+  "scope": "Path redaction only; all other evidence content preserved",
+  "manual_review_status": "pending"
+}

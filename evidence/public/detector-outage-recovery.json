@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "scope": "Prometheus visibility after detector restart",
+  "observations": [
+    {
+      "observed_at": "2026-11-13T21:18:24.470132+00:00",
+      "scrape": 1.0,
+      "query_healthy": 1.0,
+      "delivery_healthy": 1.0,
+      "successful_poll_age": 5.842602968215942,
+      "pending": 0.0,
+      "delivered": 12.0
+    }
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "case_id": "CASE-H04-DET003",
+  "status": "awaiting_analyst_review",
+  "scenario_id": "H04",
+  "finding": {
+    "caller_ref": "lab-caller-reader",
+    "classification": "sustained_inference_query_volume",
+    "detected_at": "2026-11-13T18:45:25.169815+00:00",
+    "event_count": 30,
+    "event_ids": [
+      "55bc8a2d-ebcf-4322-9485-2e0f1d6c3582",
+      "37783976-d826-4424-8563-2de9440151ee",
+      "36340ad5-3414-4842-8f69-d049aad0b8ff",
+      "303595c4-1af2-4adb-90fb-a0497444ae23",
+      "be69a87e-5757-47d3-a861-081bb16380e8",
+      "0ab178ed-8c94-40e7-9663-de6c2a1f4dac",
+      "754aa90d-e5a9-4d3f-9c85-6e784028120f",
+      "402a5919-bcef-4f55-944f-0b27ce3ae2a7",
+      "697dd9a9-85ec-4a4f-99aa-9a1e2daa9278",
+      "2951a2ce-47ad-4c2b-90bf-33d5ad3bc146",
+      "7a361749-0e8a-4021-b101-b469b9b061a1",
+      "64828802-88dc-4da6-9fdb-382ef1d43045",
+      "b6f9a180-5510-48e1-b6b3-6dddd62cda35",
+      "002e9280-b5d4-47ac-8975-a16c9d291b9d",
+      "bf38af6c-0d04-40b4-8210-872c3b0cd998",
+      "21608f65-9459-4857-b99c-f892840f5c09",
+      "58e35870-c3d9-4c8e-877e-0fd094f0e807",
+      "80c79885-2538-455d-873b-46c845526563",
+      "ad8146c3-9985-4200-b43d-f502f01ad132",
+      "c0e77f83-dd4b-46e4-9a06-6eb5108e5570",
+      "6b5b6f7e-8195-4bae-8724-e080ed24f953",
+      "eadf682f-0fcb-49d4-9cfd-43afb165bf52",
+      "ae74b4d0-1269-4ded-960a-1592e4038227",
+      "860e486e-8622-4722-90f2-4a2138b84c81",
+      "9b516942-c351-4aa2-b6f1-70fbc11621a1",
+      "49cfc0ba-e2b1-42ff-ade4-ff961dc87050",
+      "a4a59aa5-ce53-4171-968c-1b9db8387275",
+      "3316b8c9-b9e7-45cd-927e-e7739146209f",
+      "d7bfe182-bf57-4088-bce4-b19da7dbd3d7",
+      "e36f1aba-af2b-4ece-a818-603f6e6336b7"
+    ],
+    "finding_id": "1f12d2382ef8e2fb9ad5f47e9070ff9884a00ba824b551309ca2e3d95971534b",
+    "first_seen": "2026-11-13T18:43:39.592764+00:00",
+    "last_seen": "2026-11-13T18:45:21.529532+00:00",
+    "model": "research-model",
+    "rule_id": "DET-003",
+    "rule_version": "1.0",
+    "severity": "medium",
+    "threshold": 30,
+    "window_seconds": 180
+  },
+  "observed_inference_requests": 36,
+  "timeline": [
+    {
+      "timestamp": "2026-11-13T18:43:39.592764+00:00",
+      "kind": "inference_observed",
+      "reference": "55bc8a2d-ebcf-4322-9485-2e0f1d6c3582",
+      "request_id": "cb265409-05bf-43c8-bd12-bd1a98d678c9",
+      "producer_event_time": "2026-11-13T18:43:39.591211+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:43:43.106023+00:00",
+      "kind": "inference_observed",
+      "reference": "37783976-d826-4424-8563-2de9440151ee",
+      "request_id": "1f648252-ab57-4bd6-bfcf-4189b4d69fdc",
+      "producer_event_time": "2026-11-13T18:43:43.104183+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:43:46.620457+00:00",
+      "kind": "inference_observed",
+      "reference": "36340ad5-3414-4842-8f69-d049aad0b8ff",
+      "request_id": "019c4b22-8d5b-4947-a659-f80111d86f60",
+      "producer_event_time": "2026-11-13T18:43:46.618742+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:43:50.134096+00:00",
+      "kind": "inference_observed",
+      "reference": "303595c4-1af2-4adb-90fb-a0497444ae23",
+      "request_id": "b971ce70-eab3-4e34-832e-45f2a85d67b5",
+      "producer_event_time": "2026-11-13T18:43:50.132585+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:43:53.650483+00:00",
+      "kind": "inference_observed",
+      "reference": "be69a87e-5757-47d3-a861-081bb16380e8",
+      "request_id": "97281d8a-bed2-4163-b6be-9b663cf33bcd",
+      "producer_event_time": "2026-11-13T18:43:53.648768+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:43:57.164996+00:00",
+      "kind": "inference_observed",
+      "reference": "0ab178ed-8c94-40e7-9663-de6c2a1f4dac",
+      "request_id": "5f0bd259-2eb7-4d6b-b5ef-97de2e275d17",
+      "producer_event_time": "2026-11-13T18:43:57.163057+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:00.678971+00:00",
+      "kind": "inference_observed",
+      "reference": "754aa90d-e5a9-4d3f-9c85-6e784028120f",
+      "request_id": "b751daae-008a-47d3-ad3e-020efcadf023",
+      "producer_event_time": "2026-11-13T18:44:00.677375+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:04.193149+00:00",
+      "kind": "inference_observed",
+      "reference": "402a5919-bcef-4f55-944f-0b27ce3ae2a7",
+      "request_id": "fae6bec5-dd82-4d3f-a909-06ee566b8756",
+      "producer_event_time": "2026-11-13T18:44:04.191547+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:07.709899+00:00",
+      "kind": "inference_observed",
+      "reference": "697dd9a9-85ec-4a4f-99aa-9a1e2daa9278",
+      "request_id": "aa09d5f6-338e-4435-b8c8-19c81b081a62",
+      "producer_event_time": "2026-11-13T18:44:07.708031+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:11.224248+00:00",
+      "kind": "inference_observed",
+      "reference": "2951a2ce-47ad-4c2b-90bf-33d5ad3bc146",
+      "request_id": "4d18051e-03f9-4123-934f-19d56e77a10a",
+      "producer_event_time": "2026-11-13T18:44:11.222682+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:14.738800+00:00",
+      "kind": "inference_observed",
+      "reference": "7a361749-0e8a-4021-b101-b469b9b061a1",
+      "request_id": "4ca652aa-54e1-4d11-b05c-f06516deefc0",
+      "producer_event_time": "2026-11-13T18:44:14.737178+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:18.252885+00:00",
+      "kind": "inference_observed",
+      "reference": "64828802-88dc-4da6-9fdb-382ef1d43045",
+      "request_id": "79940a3e-e873-4944-9f01-57ae231a0d68",
+      "producer_event_time": "2026-11-13T18:44:18.251266+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:21.767418+00:00",
+      "kind": "inference_observed",
+      "reference": "b6f9a180-5510-48e1-b6b3-6dddd62cda35",
+      "request_id": "fa03967c-9fd8-454b-9d62-77e8b3eecb11",
+      "producer_event_time": "2026-11-13T18:44:21.765843+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:25.283025+00:00",
+      "kind": "inference_observed",
+      "reference": "002e9280-b5d4-47ac-8975-a16c9d291b9d",
+      "request_id": "6af108f9-577a-48cc-b6b0-4bbb691ed158",
+      "producer_event_time": "2026-11-13T18:44:25.281490+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:28.798597+00:00",
+      "kind": "inference_observed",
+      "reference": "bf38af6c-0d04-40b4-8210-872c3b0cd998",
+      "request_id": "7a1a8301-7eba-4478-ac81-0e2a5baf6807",
+      "producer_event_time": "2026-11-13T18:44:28.796775+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:32.313479+00:00",
+      "kind": "inference_observed",
+      "reference": "21608f65-9459-4857-b99c-f892840f5c09",
+      "request_id": "eeb8586f-a41e-4930-92fd-1b3e5c2b89ea",
+      "producer_event_time": "2026-11-13T18:44:32.311868+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:35.829614+00:00",
+      "kind": "inference_observed",
+      "reference": "58e35870-c3d9-4c8e-877e-0fd094f0e807",
+      "request_id": "716c6cf2-dccd-40f7-9549-5cd76992d952",
+      "producer_event_time": "2026-11-13T18:44:35.827953+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:39.345498+00:00",
+      "kind": "inference_observed",
+      "reference": "80c79885-2538-455d-873b-46c845526563",
+      "request_id": "e40e9077-d090-4dd7-95c6-75dbe52cc908",
+      "producer_event_time": "2026-11-13T18:44:39.343851+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:42.859056+00:00",
+      "kind": "inference_observed",
+      "reference": "ad8146c3-9985-4200-b43d-f502f01ad132",
+      "request_id": "64154fee-62ec-4a40-9019-f8c62ddb7088",
+      "producer_event_time": "2026-11-13T18:44:42.857476+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:46.375430+00:00",
+      "kind": "inference_observed",
+      "reference": "c0e77f83-dd4b-46e4-9a06-6eb5108e5570",
+      "request_id": "e0be26b2-3ed4-49a0-b958-2b03e9f9e03d",
+      "producer_event_time": "2026-11-13T18:44:46.373870+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:49.889923+00:00",
+      "kind": "inference_observed",
+      "reference": "6b5b6f7e-8195-4bae-8724-e080ed24f953",
+      "request_id": "ea2ac410-7218-4f51-9109-5ea2792fdbdf",
+      "producer_event_time": "2026-11-13T18:44:49.888090+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:53.406136+00:00",
+      "kind": "inference_observed",
+      "reference": "eadf682f-0fcb-49d4-9cfd-43afb165bf52",
+      "request_id": "fcc06a85-f328-4deb-9b5f-39af5d07bb48",
+      "producer_event_time": "2026-11-13T18:44:53.404526+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:44:56.919598+00:00",
+      "kind": "inference_observed",
+      "reference": "ae74b4d0-1269-4ded-960a-1592e4038227",
+      "request_id": "8eb856f1-407c-4298-ab85-54f09c41ef3d",
+      "producer_event_time": "2026-11-13T18:44:56.917989+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:45:00.433803+00:00",
+      "kind": "inference_observed",
+      "reference": "860e486e-8622-4722-90f2-4a2138b84c81",
+      "request_id": "be71f573-ac8d-4ae0-9d35-5e5d7aaba949",
+      "producer_event_time": "2026-11-13T18:45:00.432115+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:45:03.949879+00:00",
+      "kind": "inference_observed",
+      "reference": "9b516942-c351-4aa2-b6f1-70fbc11621a1",
+      "request_id": "3ef00b93-7a66-42f4-910c-24ab17aa276b",
+      "producer_event_time": "2026-11-13T18:45:03.948303+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:45:07.465571+00:00",
+      "kind": "inference_observed",
+      "reference": "49cfc0ba-e2b1-42ff-ade4-ff961dc87050",
+      "request_id": "f58e3ac3-a270-4960-aaa5-834c9d5b01ac",
+      "producer_event_time": "2026-11-13T18:45:07.463867+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:45:10.982701+00:00",
+      "kind": "inference_observed",
+      "reference": "a4a59aa5-ce53-4171-968c-1b9db8387275",
+      "request_id": "67e631ba-b1a6-40c1-b41d-4f74fa82ef68",
+      "producer_event_time": "2026-11-13T18:45:10.981037+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:45:14.498819+00:00",
+      "kind": "inference_observed",
+      "reference": "3316b8c9-b9e7-45cd-927e-e7739146209f",
+      "request_id": "d29e06a3-8c3e-47a7-9633-a9890db70d35",
+      "producer_event_time": "2026-11-13T18:45:14.497262+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:45:18.014480+00:00",
+      "kind": "inference_observed",
+      "reference": "d7bfe182-bf57-4088-bce4-b19da7dbd3d7",
+      "request_id": "019ce439-4887-437a-ace8-c74ef30cec75",
+      "producer_event_time": "2026-11-13T18:45:18.012917+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:45:21.529532+00:00",
+      "kind": "inference_observed",
+      "reference": "e36f1aba-af2b-4ece-a818-603f6e6336b7",
+      "request_id": "05f39d27-7483-4c89-afd0-c8e187794226",
+      "producer_event_time": "2026-11-13T18:45:21.527996+00:00",
+      "contributes_to_selected_finding": true
+    },
+    {
+      "timestamp": "2026-11-13T18:45:21.529532+00:00",
+      "kind": "threshold_crossed",
+      "reference": "30 successful requests within 180 seconds"
+    },
+    {
+      "timestamp": "2026-11-13T18:45:25.042574+00:00",
+      "kind": "inference_observed",
+      "reference": "2b42fd81-c44f-4a83-a4e1-1f6ca75e2675",
+      "request_id": "eacaa8f6-3776-41f8-93aa-c62410ac4f13",
+      "producer_event_time": "2026-11-13T18:45:25.040989+00:00",
+      "contributes_to_selected_finding": false
+    },
+    {
+      "timestamp": "2026-11-13T18:45:25.169815+00:00",
+      "kind": "finding_detected",
+      "reference": "1f12d2382ef8e2fb9ad5f47e9070ff9884a00ba824b551309ca2e3d95971534b"
+    },
+    {
+      "timestamp": "2026-11-13T18:45:25.169815+00:00",
+      "kind": "finding_queued",
+      "reference": "1f12d2382ef8e2fb9ad5f47e9070ff9884a00ba824b551309ca2e3d95971534b"
+    },
+    {
+      "timestamp": "2026-11-13T18:45:25.190147+00:00",
+      "kind": "receiver_stored",
+      "reference": "1f12d2382ef8e2fb9ad5f47e9070ff9884a00ba824b551309ca2e3d95971534b"
+    },
+    {
+      "timestamp": "2026-11-13T18:45:25.192350+00:00",
+      "kind": "outbox_acknowledged",
+      "reference": "1f12d2382ef8e2fb9ad5f47e9070ff9884a00ba824b551309ca2e3d95971534b"
+    },
+    {
+      "timestamp": "2026-11-13T18:45:28.558057+00:00",
+      "kind": "inference_observed",
+      "reference": "e5e64402-9992-4294-8644-3f36c4a9ca0a",
+      "request_id": "41cc94b5-f3cf-4218-9863-3f1e69cad4a9",
+      "producer_event_time": "2026-11-13T18:45:28.556481+00:00",
+      "contributes_to_selected_finding": false
+    },
+    {
+      "timestamp": "2026-11-13T18:45:32.074123+00:00",
+      "kind": "inference_observed",
+      "reference": "95415115-2f3f-46f4-80c8-f0dfe99cff4e",
+      "request_id": "4f1a2f94-3353-40bf-9cc3-96be4b378a64",
+      "producer_event_time": "2026-11-13T18:45:32.072471+00:00",
+      "contributes_to_selected_finding": false
+    },
+    {
+      "timestamp": "2026-11-13T18:45:35.586436+00:00",
+      "kind": "inference_observed",
+      "reference": "141d021a-cac7-4483-b8e5-1c36385afb60",
+      "request_id": "bf45a8aa-36e0-430e-bef6-1a5b0cb48c2f",
+      "producer_event_time": "2026-11-13T18:45:35.584828+00:00",
+      "contributes_to_selected_finding": false
+    },
+    {
+      "timestamp": "2026-11-13T18:45:39.101687+00:00",
+      "kind": "inference_observed",
+      "reference": "b12e257e-0f94-47c2-a355-c04d62470d6c",
+      "request_id": "ecc0ca82-921b-4410-9fe2-9f8df8c5752b",
+      "producer_event_time": "2026-11-13T18:45:39.100092+00:00",
+      "contributes_to_selected_finding": false
+    },
+    {
+      "timestamp": "2026-11-13T18:45:42.620431+00:00",
+      "kind": "inference_observed",
+      "reference": "f7eb3d4b-4699-48db-8b46-d9d803f44e4c",
+      "request_id": "428eb091-b7c6-4fe1-a7aa-fdf515dbf2a6",
+      "producer_event_time": "2026-11-13T18:45:42.618843+00:00",
+      "contributes_to_selected_finding": false
+    }
+  ],
+  "monitoring_evidence": {
+    "source": "actual local inference requests",
+    "recorded_monitor_coverage": {
+      "coverage_complete": true,
+      "reason": "healthy_recorded_coverage",
+      "poll_count": 31,
+      "largest_poll_gap_seconds": 5.008824,
+      "maximum_allowed_gap_seconds": 10,
+      "suppression_observed": true
+    }
+  },
+  "declared_exercise_context": {
+    "ground_truth": "authorized-adversarial-emulation",
+    "replica_evaluation": {
+      "heldout_target_agreement": 0.75,
+      "majority_baseline_agreement": 0.4166666666666667,
+      "replica_predictions": [
+        "botany",
+        "botany",
+        "geology",
+        "astronomy",
+        "astronomy",
+        "botany",
+        "astronomy",
+        "astronomy",
+        "astronomy",
+        "geology",
+        "astronomy",
+        "geology"
+      ],
+      "target_predictions": [
+        "botany",
+        "botany",
+        "astronomy",
+        "botany",
+        "botany",
+        "botany",
+        "astronomy",
+        "astronomy",
+        "astronomy",
+        "geology",
+        "astronomy",
+        "geology"
+      ],
+      "training_label_counts": {
+        "astronomy": 11,
+        "botany": 7,
+        "geology": 6
+      }
+    },
+    "source": "controlled runner report, not inferred from telemetry"
+  },
+  "interpretation": {
+    "supported": [
+      "Authenticated caller repeatedly invoked the model",
+      "The sustained-volume condition was met",
+      "The finding reached durable receiver storage"
+    ],
+    "not_established_by_security_events": [
+      "Caller intent",
+      "Downstream training of a replica",
+      "Complete model extraction or weight theft"
+    ],
+    "alternative_explanation": "Approved bulk processing can trigger the same volume rule"
+  },
+  "response": {
+    "status": "not_authorized_or_executed",
+    "next_action": "Review authorization and exercise context before deciding whether containment is justified"
+  },
+  "evidence_references": [
+    "../query-volume-holdout-run.json",
+    "../query-volume-holdout-assessment.json",
+    "../holdout-monitor.jsonl"
+  ]
+}

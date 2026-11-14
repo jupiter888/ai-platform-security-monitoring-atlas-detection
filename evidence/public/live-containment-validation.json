@@ -1,0 +1,27 @@
+{
+  "case_id": "88e22258-33be-43f7-a0ff-233d5bd009c3",
+  "scope": "controlled local containment exercise",
+  "status": "incomplete_requires_review",
+  "checks": [
+    "persisted approval matches the intended scope",
+    "Reader inference succeeds before containment",
+    "Admin inference succeeds before containment",
+    "analyst execution rejected",
+    "responder executes the approved scope",
+    "execution duration is exactly 60 seconds"
+  ],
+  "execution_receipt": {
+    "case_id": "88e22258-33be-43f7-a0ff-233d5bd009c3",
+    "caller_ref": "lab-caller-reader",
+    "model": "research-model",
+    "action": "temporary_model_access_block",
+    "policy_version": "1.0",
+    "duration_seconds": 60,
+    "executed_by": "lab-operator-responder",
+    "started_at": "2026-11-13T20:32:13.098932+00:00",
+    "expires_at": "2026-11-13T20:33:13.098932+00:00",
+    "status": "executed",
+    "duplicate": false,
+    "active": true
+  }
+}

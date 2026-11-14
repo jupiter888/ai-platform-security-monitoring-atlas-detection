@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "observations": [
+    {
+      "observed_at": "2026-11-13T21:20:07.732809+00:00",
+      "loki_ready": false,
+      "scrape": 1.0,
+      "query_healthy": 1.0,
+      "delivery_healthy": 1.0,
+      "successful_poll_age": 4.046662092208862,
+      "pending": 0.0
+    },
+    {
+      "observed_at": "2026-11-13T21:20:10.754843+00:00",
+      "loki_ready": false,
+      "scrape": 1.0,
+      "query_healthy": 1.0,
+      "delivery_healthy": 1.0,
+      "successful_poll_age": 7.068662166595459,
+      "pending": 0.0
+    },
+    {
+      "observed_at": "2026-11-13T21:20:13.777977+00:00",
+      "loki_ready": false,
+      "scrape": 1.0,
+      "query_healthy": 1.0,
+      "delivery_healthy": 1.0,
+      "successful_poll_age": 5.087910890579224,
+      "pending": 0.0
+    },
+    {
+      "observed_at": "2026-11-13T21:20:16.801438+00:00",
+      "loki_ready": false,
+      "scrape": 1.0,
+      "query_healthy": 1.0,
+      "delivery_healthy": 1.0,
+      "successful_poll_age": 8.110910892486572,
+      "pending": 0.0
+    },
+    {
+      "observed_at": "2026-11-13T21:20:19.825267+00:00",
+      "loki_ready": false,
+      "scrape": 1.0,
+      "query_healthy": 1.0,
+      "delivery_healthy": 1.0,
+      "successful_poll_age": 6.132798910140991,
+      "pending": 0.0
+    },
+    {
+      "observed_at": "2026-11-13T21:20:22.846783+00:00",
+      "loki_ready": true,
+      "scrape": 1.0,
+      "query_healthy": 1.0,
+      "delivery_healthy": 1.0,
+      "successful_poll_age": 4.148727178573608,
+      "pending": 0.0
+    }
+  ]
+}

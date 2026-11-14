@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "scenario": "controlled-benign-credential-misconfiguration",
+  "ground_truth": "benign",
+  "checks": [
+    "window and cooldown are clear",
+    "two benign credential mistakes are rejected",
+    "corrected credential successfully invokes inference",
+    "two mistakes remain below the detection threshold",
+    "three additional misconfigured requests are rejected",
+    "benign threshold crossing is delivered and acknowledged",
+    "sixth misconfigured request is rejected",
+    "six events produce a distinct evidence-linked candidate",
+    "continuous monitor explicitly reports candidate suppression",
+    "suppressed candidate is not queued; original acknowledgment remains"
+  ],
+  "requests": [
+    {
+      "http_status": 401,
+      "request_id": "3c48dafc-a6ed-466f-8a9b-d7508ad0db4e"
+    },
+    {
+      "http_status": 401,
+      "request_id": "be549dbc-0afc-4c97-8570-150b6fc27456"
+    },
+    {
+      "http_status": 200,
+      "request_id": "0c9cc088-59c0-411c-914b-7a626db29112"
+    },
+    {
+      "http_status": 401,
+      "request_id": "04e79b08-95e3-4e56-a6bf-0c1ae7e78fd6"
+    },
+    {
+      "http_status": 401,
+      "request_id": "42242da7-c163-42c1-9aec-f2b789f1d07b"
+    },
+    {
+      "http_status": 401,
+      "request_id": "45b49b67-582f-4b2f-bd0f-5224f6aa686e"
+    },
+    {
+      "http_status": 401,
+      "request_id": "9810eb94-f7ed-450c-8e38-1c33cb1cccc0"
+    }
+  ],
+  "original_finding": {
+    "caller_ref": null,
+    "classification": "aggregate_authentication_failures",
+    "detected_at": "2026-11-14T09:58:32.751813+00:00",
+    "event_count": 5,
+    "event_ids": [
+      "0a0d1296-5dea-4900-958d-853cb2652049",
+      "4e44e852-7d45-44cf-b3aa-eca30679991f",
+      "fe7255e9-ec9c-46bb-9264-c11f511951e1",
+      "f7cef008-3b67-469c-a49d-0d130a1dbd33",
+      "823a6383-104c-4a2a-88e7-eefc8e154d4b"
+    ],
+    "finding_id": "968cd2af496d62bb06b1bed5e9ae3b51a04553842546f312cf626e9caab75803",
+    "first_seen": "2026-11-14T09:58:27.407330+00:00",
+    "last_seen": "2026-11-14T09:58:29.458866+00:00",
+    "model": "not-applicable",
+    "rule_id": "DET-004",
+    "rule_version": "1.0",
+    "severity": "medium",
+    "threshold": 5,
+    "window_seconds": 60
+  },
+  "interpretation": "The aggregate condition matched correctly. Because scenario ground truth is benign, treating this finding as malicious activity would be an operational false positive.",
+  "suppression_candidate": {
+    "rule_id": "DET-004",
+    "rule_version": "1.0",
+    "caller_ref": null,
+    "model": "not-applicable",
+    "event_ids": [
+      "0a0d1296-5dea-4900-958d-853cb2652049",
+      "4e44e852-7d45-44cf-b3aa-eca30679991f",
+      "fe7255e9-ec9c-46bb-9264-c11f511951e1",
+      "f7cef008-3b67-469c-a49d-0d130a1dbd33",
+      "823a6383-104c-4a2a-88e7-eefc8e154d4b",
+      "b618e80a-3180-4d1d-840f-35db1798fb81"
+    ],
+    "finding_id": "830a1af81351a41a89fcf69c18205a341ce34be5af6af6321604c40916330988",
+    "severity": "medium",
+    "classification": "aggregate_authentication_failures",
+    "event_count": 6,
+    "threshold": 5,
+    "window_seconds": 60,
+    "first_seen": "2026-11-14T09:58:27.407330+00:00",
+    "last_seen": "2026-11-14T09:58:33.498441+00:00",
+    "detected_at": "2026-11-14T09:58:35.514274+00:00"
+  },
+  "suppression_diagnostic": {
+    "disposition": "suppressed",
+    "event": "finding_enqueue_disposition",
+    "finding_id": "830a1af81351a41a89fcf69c18205a341ce34be5af6af6321604c40916330988",
+    "rule_id": "DET-004"
+  },
+  "completed_at": "2026-11-14T09:58:39.535909+00:00"
+}

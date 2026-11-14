@@ -1,0 +1,53 @@
+{
+  "schema_version": "response-retest/1.0",
+  "objective": "Verify scoped query-access blocking and recovery",
+  "ground_truth": "authorized-response-retest",
+  "source_scenario_id": "H03",
+  "source_scenario_name": "burst-replication",
+  "source_manifest_sha256": "d73eac2f56e2a7161c384d1dec5c5007a22842d87d3a3575d303628a96e5530b",
+  "source_finding_id": "e65b72eae915eb1b01a06b0c9037bb4edd7d0c2d4b2bceec3f6976879c66ad7d",
+  "source_rule_id": "DET-003",
+  "caller_ref": "lab-caller-reader",
+  "model": "research-model",
+  "model_version": "40c0ae79f1e5f4da",
+  "containment_action": "temporary_model_access_block",
+  "containment_seconds": 60,
+  "containment_policy_version": "1.0",
+  "phases": [
+    "before",
+    "during",
+    "after"
+  ],
+  "queries": [
+    "Compare stellar orbits and the motion of planets.",
+    "Describe telescopes observing distant galaxies.",
+    "Explain how roots absorb water from soil.",
+    "Describe leaves using sunlight for photosynthesis.",
+    "Explain how volcanic rocks form from cooling magma.",
+    "Describe sediment layers and mineral crystals."
+  ],
+  "admin_control": {
+    "caller_ref": "lab-caller-admin",
+    "model": "restricted-model",
+    "requests_per_phase": 1
+  },
+  "execution": {
+    "sequential_requests": true,
+    "automatic_http_retries": false,
+    "maximum_inference_requests": 21,
+    "maximum_operator_requests": 5
+  },
+  "acceptance": {
+    "before_reader": "Six successful predictions",
+    "during_reader": "Six HTTP 403 containment denials without predictions",
+    "after_reader": "Six successful predictions after expiry",
+    "admin_controls": "Successful prediction in all three phases",
+    "audit": "Correlate operator and inference request IDs to Loki"
+  },
+  "limitations": [
+    "Small query-access retest, not a repeat extraction experiment",
+    "No new replica agreement or detection-performance measurement",
+    "Separate synthetic principals operated by one researcher",
+    "No production containment-effectiveness claim"
+  ]
+}

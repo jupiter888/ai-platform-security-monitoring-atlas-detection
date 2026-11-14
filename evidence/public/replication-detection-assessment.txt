@@ -1,0 +1,43 @@
+PASS: all 36 actual inference requests correlate to Loki events
+PASS: delivered DET-002 evidence belongs to the replication run
+PASS: approved batch also has a stored DET-002 finding
+{
+  "rule_id": "DET-002",
+  "evaluation_unit": "selected controlled scenario",
+  "scenario_count": 2,
+  "scenarios": [
+    {
+      "name": "approved-research-batch",
+      "ground_truth": "benign",
+      "finding_delivered": true,
+      "classification": "operational_false_positive",
+      "finding_id": "db5fa6f1f809d3d9b27fb4fffd0f4cc016bd4fa14b431fba4356282ebc8859a7"
+    },
+    {
+      "name": "controlled-output-based-model-replication",
+      "ground_truth": "authorized-adversarial-emulation",
+      "finding_delivered": true,
+      "classification": "true_positive_for_declared_scenario",
+      "finding_id": "3ef77e699efffcced22c2609af28ee2d57245ec7c89128030a27cbf397a3229a",
+      "supporting_event_count": 32
+    }
+  ],
+  "selected_scenario_counts": {
+    "true_positives": 1,
+    "false_positives": 1,
+    "true_negatives": 0,
+    "false_negatives": 0
+  },
+  "selected_scenario_precision": 0.5,
+  "selected_scenario_recall": 1.0,
+  "replica_heldout_target_agreement": 0.75,
+  "majority_baseline_agreement": 0.5,
+  "limitations": [
+    "Two deliberately selected scenarios are not representative",
+    "No population-level detection performance claim",
+    "Volume alone did not distinguish intent",
+    "Successful requests do not prove model extraction",
+    "Model imitation and detection are separate measurements"
+  ]
+}
+Replication detection assessment: 3/3 passed

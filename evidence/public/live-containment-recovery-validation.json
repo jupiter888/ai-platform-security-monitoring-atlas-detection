@@ -1,0 +1,249 @@
+{
+  "case_id": "3e1dbf59-84e8-4611-8b69-e0650535877f",
+  "status": "passed",
+  "checks": [
+    "persisted approval matches the intended scope",
+    "Reader inference succeeds before containment",
+    "Admin inference succeeds before containment",
+    "analyst execution rejected",
+    "responder executes the approved scope",
+    "execution duration is exactly 60 seconds",
+    "contained Reader receives denial without prediction output",
+    "other authorized caller and model remain available",
+    "repeat execution does not extend containment",
+    "Reader inference recovers after automatic expiry",
+    "case retains execution history after expiry"
+  ],
+  "responses": [
+    {
+      "label": "approval inspection",
+      "observed_at": "2026-11-13T20:54:38.411837+00:00",
+      "http_status": 200,
+      "request_id": null,
+      "body": {
+        "case_id": "3e1dbf59-84e8-4611-8b69-e0650535877f",
+        "finding_id": "3ef77e699efffcced22c2609af28ee2d57245ec7c89128030a27cbf397a3229a",
+        "caller_ref": "lab-caller-reader",
+        "model": "research-model",
+        "state": "containment_approved",
+        "opened_by": "lab-operator-analyst",
+        "requester": "lab-operator-analyst",
+        "approver": "lab-operator-approver",
+        "opened_at": "2026-11-13T20:53:43.779575+00:00",
+        "updated_at": "2026-11-13T20:53:43.795865+00:00",
+        "containment_action": "temporary_model_access_block",
+        "containment_seconds": 60,
+        "containment_policy_version": "1.0",
+        "audit": [
+          {
+            "sequence": 7,
+            "timestamp": "2026-11-13T20:53:43.779575+00:00",
+            "actor": "lab-operator-analyst",
+            "role": "analyst",
+            "action": "case_opened",
+            "new_state": "open",
+            "reason": "finding_review"
+          },
+          {
+            "sequence": 8,
+            "timestamp": "2026-11-13T20:53:43.786557+00:00",
+            "actor": "lab-operator-analyst",
+            "role": "analyst",
+            "action": "containment_requested",
+            "new_state": "containment_requested",
+            "reason": "controlled_exercise"
+          },
+          {
+            "sequence": 9,
+            "timestamp": "2026-11-13T20:53:43.795865+00:00",
+            "actor": "lab-operator-approver",
+            "role": "approver",
+            "action": "containment_approved",
+            "new_state": "containment_approved",
+            "reason": "controlled_exercise"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Reader baseline",
+      "observed_at": "2026-11-13T20:54:38.420467+00:00",
+      "http_status": 200,
+      "request_id": "2be2e30b-437b-4a19-9f89-4ff0e8c4b874",
+      "body": {
+        "model": "research-model",
+        "model_version": "40c0ae79f1e5f4da",
+        "label": "astronomy",
+        "score": 0.6722844612296203
+      }
+    },
+    {
+      "label": "Admin baseline",
+      "observed_at": "2026-11-13T20:54:38.428092+00:00",
+      "http_status": 200,
+      "request_id": "617684ac-c570-470b-9198-98ee6046b259",
+      "body": {
+        "model": "restricted-model",
+        "model_version": "40c0ae79f1e5f4da",
+        "label": "astronomy",
+        "score": 0.6722844612296203
+      }
+    },
+    {
+      "label": "analyst execution attempt",
+      "observed_at": "2026-11-13T20:54:38.431681+00:00",
+      "http_status": 403,
+      "request_id": null,
+      "body": {
+        "detail": "Operator authorization denied"
+      }
+    },
+    {
+      "label": "responder execution",
+      "observed_at": "2026-11-13T20:54:38.437872+00:00",
+      "http_status": 200,
+      "request_id": null,
+      "body": {
+        "case_id": "3e1dbf59-84e8-4611-8b69-e0650535877f",
+        "caller_ref": "lab-caller-reader",
+        "model": "research-model",
+        "action": "temporary_model_access_block",
+        "policy_version": "1.0",
+        "duration_seconds": 60,
+        "executed_by": "lab-operator-responder",
+        "started_at": "2026-11-13T20:54:38.435283+00:00",
+        "expires_at": "2026-11-13T20:55:38.435283+00:00",
+        "status": "executed",
+        "duplicate": false,
+        "active": true
+      }
+    },
+    {
+      "label": "Reader during containment",
+      "observed_at": "2026-11-13T20:54:38.445800+00:00",
+      "http_status": 403,
+      "request_id": "4eea9185-aa24-46f8-8977-9579fbaa9ffa",
+      "body": {
+        "detail": "Temporary model access block"
+      }
+    },
+    {
+      "label": "Admin during containment",
+      "observed_at": "2026-11-13T20:54:38.454708+00:00",
+      "http_status": 200,
+      "request_id": "6e54955f-762e-4fde-b07f-4cbbee8d75a6",
+      "body": {
+        "model": "restricted-model",
+        "model_version": "40c0ae79f1e5f4da",
+        "label": "astronomy",
+        "score": 0.6722844612296203
+      }
+    },
+    {
+      "label": "repeat execution",
+      "observed_at": "2026-11-13T20:54:38.460421+00:00",
+      "http_status": 200,
+      "request_id": null,
+      "body": {
+        "case_id": "3e1dbf59-84e8-4611-8b69-e0650535877f",
+        "caller_ref": "lab-caller-reader",
+        "model": "research-model",
+        "action": "temporary_model_access_block",
+        "policy_version": "1.0",
+        "duration_seconds": 60,
+        "executed_by": "lab-operator-responder",
+        "started_at": "2026-11-13T20:54:38.435283+00:00",
+        "expires_at": "2026-11-13T20:55:38.435283+00:00",
+        "status": "executed",
+        "duplicate": true,
+        "active": true
+      }
+    },
+    {
+      "label": "Reader after expiry",
+      "observed_at": "2026-11-13T20:55:38.491872+00:00",
+      "http_status": 200,
+      "request_id": "6841ab7b-9256-480d-83b4-d1bc866c96dc",
+      "body": {
+        "model": "research-model",
+        "model_version": "40c0ae79f1e5f4da",
+        "label": "astronomy",
+        "score": 0.6722844612296203
+      }
+    },
+    {
+      "label": "final case inspection",
+      "observed_at": "2026-11-13T20:55:38.497310+00:00",
+      "http_status": 200,
+      "request_id": null,
+      "body": {
+        "case_id": "3e1dbf59-84e8-4611-8b69-e0650535877f",
+        "finding_id": "3ef77e699efffcced22c2609af28ee2d57245ec7c89128030a27cbf397a3229a",
+        "caller_ref": "lab-caller-reader",
+        "model": "research-model",
+        "state": "containment_executed",
+        "opened_by": "lab-operator-analyst",
+        "requester": "lab-operator-analyst",
+        "approver": "lab-operator-approver",
+        "opened_at": "2026-11-13T20:53:43.779575+00:00",
+        "updated_at": "2026-11-13T20:54:38.435283+00:00",
+        "containment_action": "temporary_model_access_block",
+        "containment_seconds": 60,
+        "containment_policy_version": "1.0",
+        "audit": [
+          {
+            "sequence": 7,
+            "timestamp": "2026-11-13T20:53:43.779575+00:00",
+            "actor": "lab-operator-analyst",
+            "role": "analyst",
+            "action": "case_opened",
+            "new_state": "open",
+            "reason": "finding_review"
+          },
+          {
+            "sequence": 8,
+            "timestamp": "2026-11-13T20:53:43.786557+00:00",
+            "actor": "lab-operator-analyst",
+            "role": "analyst",
+            "action": "containment_requested",
+            "new_state": "containment_requested",
+            "reason": "controlled_exercise"
+          },
+          {
+            "sequence": 9,
+            "timestamp": "2026-11-13T20:53:43.795865+00:00",
+            "actor": "lab-operator-approver",
+            "role": "approver",
+            "action": "containment_approved",
+            "new_state": "containment_approved",
+            "reason": "controlled_exercise"
+          },
+          {
+            "sequence": 10,
+            "timestamp": "2026-11-13T20:54:38.435283+00:00",
+            "actor": "lab-operator-responder",
+            "role": "responder",
+            "action": "containment_executed",
+            "new_state": "containment_executed",
+            "reason": "controlled_exercise"
+          }
+        ]
+      }
+    }
+  ],
+  "execution_receipt": {
+    "case_id": "3e1dbf59-84e8-4611-8b69-e0650535877f",
+    "caller_ref": "lab-caller-reader",
+    "model": "research-model",
+    "action": "temporary_model_access_block",
+    "policy_version": "1.0",
+    "duration_seconds": 60,
+    "executed_by": "lab-operator-responder",
+    "started_at": "2026-11-13T20:54:38.435283+00:00",
+    "expires_at": "2026-11-13T20:55:38.435283+00:00",
+    "status": "executed",
+    "duplicate": false,
+    "active": true
+  },
+  "completed_at": "2026-11-13T20:55:38.498850+00:00"
+}

@@ -1,0 +1,38 @@
+{
+  "model": "research-model",
+  "model_version": "40c0ae79f1e5f4da",
+  "training_examples": 24,
+  "evaluation_examples": 9,
+  "data_provenance": "synthetic",
+  "accuracy": 0.7777777777777778,
+  "confusion_matrix": [
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      0,
+      3,
+      0
+    ],
+    [
+      1,
+      0,
+      2
+    ]
+  ],
+  "class_order": [
+    "astronomy",
+    "botany",
+    "geology"
+  ],
+  "matrix_rows": "expected",
+  "matrix_columns": "predicted",
+  "limitations": [
+    "Small hand-authored dataset",
+    "Related vocabulary across training and evaluation",
+    "No production accuracy or calibrated-confidence claim",
+    "Not an attack-detection evaluation"
+  ]
+}

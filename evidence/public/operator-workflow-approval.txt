@@ -1,0 +1,4 @@
+PASS: Approver retrieves the requested scope — HTTP 200
+PASS: Distinct approver approves the persisted scope — HTTP 200
+Live workflow approval: 2/2 passed
+Approval recorded; no containment executed.

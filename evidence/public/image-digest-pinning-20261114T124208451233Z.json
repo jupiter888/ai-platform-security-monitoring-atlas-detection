@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-11-14T12:42:08.603612+00:00",
+  "status": "passed",
+  "images": [
+    {
+      "service": "prometheus",
+      "previous_tag": "prom/prometheus:v3.16.0",
+      "pinned_reference": "prom/prometheus@sha256:e04987641b57704f408e31f6373ba4138ecf27cb4a165d24aabb6c38fddd0f06",
+      "scanned_image_id": "sha256:e04987641b57704f408e31f6373ba4138ecf27cb4a165d24aabb6c38fddd0f06",
+      "platform": "linux/amd64"
+    },
+    {
+      "service": "loki",
+      "previous_tag": "grafana/loki:3.6.20",
+      "pinned_reference": "grafana/loki@sha256:be040ec94865dabe4821ce1c0f109452bd4b5acb566ae376672696eb43caedb7",
+      "scanned_image_id": "sha256:be040ec94865dabe4821ce1c0f109452bd4b5acb566ae376672696eb43caedb7",
+      "platform": "linux/amd64"
+    },
+    {
+      "service": "grafana",
+      "previous_tag": "grafana/grafana:13.3.1",
+      "pinned_reference": "grafana/grafana@sha256:0615ec4fbd4072004b7d86b46ded63013a74b7d6eb1119273dd89e8fa25c13cf",
+      "scanned_image_id": "sha256:0615ec4fbd4072004b7d86b46ded63013a74b7d6eb1119273dd89e8fa25c13cf",
+      "platform": "linux/amd64"
+    }
+  ],
+  "services_restarted": false,
+  "limitations": [
+    "Digest pinning preserves image identity; it does not remediate vulnerabilities",
+    "Image resolution was verified on linux/amd64"
+  ]
+}

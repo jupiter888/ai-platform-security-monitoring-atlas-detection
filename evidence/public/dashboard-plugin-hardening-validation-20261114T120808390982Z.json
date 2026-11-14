@@ -1,0 +1,127 @@
+{
+  "checked_at": "2026-11-14T12:08:08.390486+00:00",
+  "validation": "dashboard-data-path-after-plugin-hardening",
+  "status": "passed",
+  "unauthenticated_query_rejected": true,
+  "panel_count": 16,
+  "observation_window_minutes": 15,
+  "panels": [
+    {
+      "panel_id": 1,
+      "title": "Detector scrape",
+      "queries_checked": 1,
+      "frames_returned": 1,
+      "status": "passed"
+    },
+    {
+      "panel_id": 2,
+      "title": "Query cycle",
+      "queries_checked": 1,
+      "frames_returned": 1,
+      "status": "passed"
+    },
+    {
+      "panel_id": 3,
+      "title": "Delivery cycle",
+      "queries_checked": 1,
+      "frames_returned": 1,
+      "status": "passed"
+    },
+    {
+      "panel_id": 4,
+      "title": "Successful poll age",
+      "queries_checked": 1,
+      "frames_returned": 1,
+      "status": "passed"
+    },
+    {
+      "panel_id": 5,
+      "title": "Pending findings",
+      "queries_checked": 1,
+      "frames_returned": 1,
+      "status": "passed"
+    },
+    {
+      "panel_id": 6,
+      "title": "Acknowledged outbox records",
+      "queries_checked": 1,
+      "frames_returned": 1,
+      "status": "passed"
+    },
+    {
+      "panel_id": 7,
+      "title": "Delivery failures \u00b7 last 15 min",
+      "queries_checked": 1,
+      "frames_returned": 1,
+      "status": "passed"
+    },
+    {
+      "panel_id": 8,
+      "title": "Collector buffer",
+      "queries_checked": 1,
+      "frames_returned": 1,
+      "status": "passed"
+    },
+    {
+      "panel_id": 9,
+      "title": "Finding queue and acknowledgment activity",
+      "queries_checked": 3,
+      "frames_returned": 3,
+      "status": "passed"
+    },
+    {
+      "panel_id": 10,
+      "title": "Persistent delivery backlog",
+      "queries_checked": 1,
+      "frames_returned": 1,
+      "status": "passed"
+    },
+    {
+      "panel_id": 11,
+      "title": "Actual inference decisions \u00b7 rolling 1 minute",
+      "queries_checked": 1,
+      "frames_returned": 0,
+      "status": "passed"
+    },
+    {
+      "panel_id": 12,
+      "title": "Containment and policy-check events",
+      "queries_checked": 1,
+      "frames_returned": 1,
+      "status": "passed"
+    },
+    {
+      "panel_id": 13,
+      "title": "Authentication decisions \u00b7 rolling 1 minute",
+      "queries_checked": 1,
+      "frames_returned": 0,
+      "status": "passed"
+    },
+    {
+      "panel_id": 14,
+      "title": "Inference admission rejections \u00b7 rolling 1 minute",
+      "queries_checked": 1,
+      "frames_returned": 0,
+      "status": "passed"
+    },
+    {
+      "panel_id": 15,
+      "title": "Operator decisions \u00b7 rolling 1 minute",
+      "queries_checked": 1,
+      "frames_returned": 0,
+      "status": "passed"
+    },
+    {
+      "panel_id": 16,
+      "title": "Operator audit trail",
+      "queries_checked": 1,
+      "frames_returned": 1,
+      "status": "passed"
+    }
+  ],
+  "limitations": [
+    "Successful queries do not establish detection effectiveness",
+    "Empty results may reflect a quiet observation window",
+    "Plugin disabling does not remove vulnerable binaries"
+  ]
+}

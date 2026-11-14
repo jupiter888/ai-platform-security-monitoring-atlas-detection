@@ -1,0 +1,11 @@
+PASS: Reader inference — HTTP 200
+PASS: Reader restricted-model denial — HTTP 403
+PASS: Admin restricted-model inference — HTTP 200
+PASS: Missing credential — HTTP 401
+PASS: Invalid credential — HTTP 401
+PASS: Invalid request schema — HTTP 422
+PASS: all six requests have matching live-lab events in Loki
+PASS: queried events exclude input and credential canaries
+Matching log records: 6
+Inference monitoring validation: 8/8 passed
+Scope: actual local API activity; no detection rule evaluated

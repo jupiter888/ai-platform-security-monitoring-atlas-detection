@@ -1,0 +1,852 @@
+{
+  "uid": "p10-security-operations",
+  "title": "Project 10 \u2014 AI Inference Security Operations",
+  "description": "Local AI inference decisions, detector freshness, durable finding delivery, and controlled containment evidence.",
+  "tags": [
+    "project10",
+    "ai-security",
+    "detection",
+    "response"
+  ],
+  "schemaVersion": 39,
+  "version": 2,
+  "editable": false,
+  "timezone": "browser",
+  "refresh": "5s",
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "annotations": {
+    "list": []
+  },
+  "templating": {
+    "list": []
+  },
+  "panels": [
+    {
+      "id": 1,
+      "title": "Detector scrape",
+      "type": "stat",
+      "description": "Latest observed state. Check poll freshness separately. Delivery-cycle health does not prove a recent delivery attempt.",
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "p10-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "up{job=\"p10-detector\"}",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "p10-prometheus"
+          },
+          "instant": true,
+          "range": false
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data",
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "0": {
+                  "text": "Unhealthy",
+                  "color": "red",
+                  "index": 0
+                },
+                "1": {
+                  "text": "Healthy",
+                  "color": "green",
+                  "index": 1
+                }
+              }
+            }
+          ]
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "auto"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Query cycle",
+      "type": "stat",
+      "description": "Latest observed state. Check poll freshness separately. Delivery-cycle health does not prove a recent delivery attempt.",
+      "gridPos": {
+        "x": 6,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "p10-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "p10_detector_query_cycle_healthy",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "p10-prometheus"
+          },
+          "instant": true,
+          "range": false
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data",
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "0": {
+                  "text": "Unhealthy",
+                  "color": "red",
+                  "index": 0
+                },
+                "1": {
+                  "text": "Healthy",
+                  "color": "green",
+                  "index": 1
+                }
+              }
+            }
+          ]
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "auto"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Delivery cycle",
+      "type": "stat",
+      "description": "Latest observed state. Check poll freshness separately. Delivery-cycle health does not prove a recent delivery attempt.",
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "p10-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "p10_detector_delivery_cycle_healthy",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "p10-prometheus"
+          },
+          "instant": true,
+          "range": false
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data",
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "0": {
+                  "text": "Unhealthy",
+                  "color": "red",
+                  "index": 0
+                },
+                "1": {
+                  "text": "Healthy",
+                  "color": "green",
+                  "index": 1
+                }
+              }
+            }
+          ]
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "auto"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Successful poll age",
+      "type": "stat",
+      "description": "Age of the latest fully successful completed poll. Large values can indicate stalled or failing processing.",
+      "gridPos": {
+        "x": 18,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "p10-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "time() - p10_detector_last_success_timestamp_seconds",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "p10-prometheus"
+          },
+          "instant": true,
+          "range": false
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "noValue": "No data",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 15
+              },
+              {
+                "color": "red",
+                "value": 30
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "auto"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Pending findings",
+      "type": "stat",
+      "description": "Persisted findings awaiting receiver acknowledgment.",
+      "gridPos": {
+        "x": 0,
+        "y": 4,
+        "w": 6,
+        "h": 4
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "p10-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "p10_detector_outbox_pending",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "p10-prometheus"
+          },
+          "instant": true,
+          "range": false
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data"
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "auto"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Acknowledged outbox records",
+      "type": "stat",
+      "description": "Persisted outbox records marked delivered. This is not an analyst investigation or closure count.",
+      "gridPos": {
+        "x": 6,
+        "y": 4,
+        "w": 6,
+        "h": 4
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "p10-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "p10_detector_outbox_delivered",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "p10-prometheus"
+          },
+          "instant": true,
+          "range": false
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data"
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "auto"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Delivery failures \u00b7 last 15 min",
+      "type": "stat",
+      "description": "Prometheus estimates counter increases from sampled observations. Process restarts reset the underlying counter.",
+      "gridPos": {
+        "x": 12,
+        "y": 4,
+        "w": 6,
+        "h": 4
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "p10-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "increase(p10_detector_delivery_failures_total[15m])",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "p10-prometheus"
+          },
+          "instant": true,
+          "range": false
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data"
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "auto"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Collector buffer",
+      "type": "stat",
+      "description": "Events accepted by the collector but not yet delivered.",
+      "gridPos": {
+        "x": 18,
+        "y": 4,
+        "w": 6,
+        "h": 4
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "p10-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "p10_collector_buffer_events",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "p10-prometheus"
+          },
+          "instant": true,
+          "range": false
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data"
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "auto"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Finding queue and acknowledgment activity",
+      "type": "timeseries",
+      "description": "Process-local reported activity. Restarts reset counters.",
+      "gridPos": {
+        "x": 0,
+        "y": 8,
+        "w": 12,
+        "h": 8
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "p10-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "rate(p10_detector_findings_queued_total[1m])",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "p10-prometheus"
+          },
+          "instant": false,
+          "range": true,
+          "legendFormat": "Queued / second"
+        },
+        {
+          "refId": "B",
+          "expr": "rate(p10_detector_findings_delivered_total[1m])",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "p10-prometheus"
+          },
+          "instant": false,
+          "range": true,
+          "legendFormat": "Acknowledged / second"
+        },
+        {
+          "refId": "C",
+          "expr": "rate(p10_detector_delivery_failures_total[1m])",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "p10-prometheus"
+          },
+          "instant": false,
+          "range": true,
+          "legendFormat": "Delivery failures / second"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data"
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "title": "Persistent delivery backlog",
+      "type": "timeseries",
+      "description": "Unknown storage state is exported as NaN rather than a zero backlog.",
+      "gridPos": {
+        "x": 12,
+        "y": 8,
+        "w": 12,
+        "h": 8
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "p10-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "p10_detector_outbox_pending",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "p10-prometheus"
+          },
+          "instant": false,
+          "range": true,
+          "legendFormat": "Pending findings"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data"
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "title": "Actual inference decisions \u00b7 rolling 1 minute",
+      "type": "timeseries",
+      "description": "Live-lab gateway events only. Rolling windows overlap; do not sum plotted points to obtain a total request count.",
+      "gridPos": {
+        "x": 0,
+        "y": 16,
+        "w": 24,
+        "h": 8
+      },
+      "datasource": {
+        "type": "loki",
+        "uid": "p10-loki"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "loki",
+            "uid": "p10-loki"
+          },
+          "expr": "sum by (reason) (count_over_time({job=\"p10-security\",source=\"gateway\",provenance=\"live-lab\"} | json | __error__=\"\" [1m]))",
+          "queryType": "range",
+          "legendFormat": "{{reason}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data"
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "title": "Containment and policy-check events",
+      "type": "logs",
+      "description": "Bounded security metadata from actual API activity. Synthetic compatibility probes are excluded.",
+      "gridPos": {
+        "x": 0,
+        "y": 24,
+        "w": 24,
+        "h": 9
+      },
+      "datasource": {
+        "type": "loki",
+        "uid": "p10-loki"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "loki",
+            "uid": "p10-loki"
+          },
+          "expr": "{job=\"p10-security\",source=\"gateway\",provenance=\"live-lab\"} | json | __error__=\"\" | reason=~\"containment_enforced|response_policy_unavailable\"",
+          "queryType": "range",
+          "maxLines": 100
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data"
+        },
+        "overrides": []
+      },
+      "options": {
+        "showTime": true,
+        "showLabels": false,
+        "wrapLogMessage": true,
+        "sortOrder": "Descending",
+        "enableLogDetails": true,
+        "dedupStrategy": "none"
+      }
+    },
+    {
+      "id": 13,
+      "title": "Authentication decisions \u00b7 rolling 1 minute",
+      "type": "timeseries",
+      "description": "Aggregate failures and missing credentials. These series do not identify a shared attacker.",
+      "gridPos": {
+        "x": 0,
+        "y": 33,
+        "w": 12,
+        "h": 8
+      },
+      "datasource": {
+        "type": "loki",
+        "uid": "p10-loki"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "loki",
+            "uid": "p10-loki"
+          },
+          "expr": "sum by (reason) (count_over_time({job=\"p10-security\",source=\"gateway\",provenance=\"live-lab\"} | json | __error__=\"\" | reason=~\"authentication_failed|authentication_required\" [1m]))",
+          "queryType": "range",
+          "legendFormat": "{{reason}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data"
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      }
+    },
+    {
+      "id": 14,
+      "title": "Inference admission rejections \u00b7 rolling 1 minute",
+      "type": "timeseries",
+      "description": "Actual capacity rejections. Pressure does not establish malicious intent.",
+      "gridPos": {
+        "x": 12,
+        "y": 33,
+        "w": 12,
+        "h": 8
+      },
+      "datasource": {
+        "type": "loki",
+        "uid": "p10-loki"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "loki",
+            "uid": "p10-loki"
+          },
+          "expr": "sum by (reason) (count_over_time({job=\"p10-security\",source=\"gateway\",provenance=\"live-lab\"} | json | __error__=\"\" | reason=\"concurrency_exceeded\" [1m]))",
+          "queryType": "range",
+          "legendFormat": "{{reason}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data"
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      }
+    },
+    {
+      "id": 15,
+      "title": "Operator decisions \u00b7 rolling 1 minute",
+      "type": "timeseries",
+      "description": "Successful operations and rejected attempts, grouped by bounded reason.",
+      "gridPos": {
+        "x": 0,
+        "y": 41,
+        "w": 24,
+        "h": 8
+      },
+      "datasource": {
+        "type": "loki",
+        "uid": "p10-loki"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "loki",
+            "uid": "p10-loki"
+          },
+          "expr": "sum by (reason) (count_over_time({job=\"p10-security\",source=\"operator\",provenance=\"live-lab\"} | json | __error__=\"\" [1m]))",
+          "queryType": "range",
+          "legendFormat": "{{reason}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data"
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      }
+    },
+    {
+      "id": 16,
+      "title": "Operator audit trail",
+      "type": "logs",
+      "description": "Actual operator operations with server-generated correlation IDs. Submitted bodies and credentials are excluded by the event contract.",
+      "gridPos": {
+        "x": 0,
+        "y": 49,
+        "w": 24,
+        "h": 9
+      },
+      "datasource": {
+        "type": "loki",
+        "uid": "p10-loki"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "loki",
+            "uid": "p10-loki"
+          },
+          "expr": "{job=\"p10-security\",source=\"operator\",provenance=\"live-lab\"} | json | __error__=\"\"",
+          "queryType": "range",
+          "maxLines": 100
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "noValue": "No data"
+        },
+        "overrides": []
+      },
+      "options": {
+        "showTime": true,
+        "showLabels": false,
+        "wrapLogMessage": true,
+        "sortOrder": "Descending",
+        "enableLogDetails": true,
+        "dedupStrategy": "none"
+      }
+    }
+  ]
+}

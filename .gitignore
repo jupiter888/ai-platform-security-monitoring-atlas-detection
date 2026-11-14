@@ -1,0 +1,23 @@
+# Local credentials, state, and publication exclusions
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.sqlite3-*
+credentials/
+evidence/private/
+/docs/project-checklist.md
+.DS_Store

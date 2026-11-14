@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-11-14T12:37:29.081326+00:00",
+  "status": "passed",
+  "scope": "fresh macOS Python 3.11 dependency installation and regression",
+  "lockfiles": [
+    {
+      "lockfile": "requirements-runtime.lock",
+      "sha256": "1d7d30777c57e9d1fe3a842db6bfe06131cdc0090c4ca4450da8eb3f9768ab18",
+      "package_count": 21,
+      "fresh_environment_matches": true
+    },
+    {
+      "lockfile": "requirements-dev.lock",
+      "sha256": "3334424157cc095d2ee60fbb511617428dfa9f58a1f184c53bed656929a6bae3",
+      "package_count": 24,
+      "fresh_environment_matches": true
+    }
+  ],
+  "installation": {
+    "hash_checking_required": true,
+    "binary_distributions_only": true,
+    "pip": "26.3",
+    "setuptools": "84.1.0"
+  },
+  "regression_tests_passed": 344,
+  "limitations": [
+    "Other operating systems and Python versions were not validated",
+    "Service startup is a separate verification",
+    "Unresolved container findings are unaffected",
+    "No-known-vulnerability results are specific to the audit time"
+  ]
+}

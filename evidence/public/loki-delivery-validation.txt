@@ -1,0 +1,6 @@
+PASS: three synthetic heartbeats accepted
+PASS: all three submitted event IDs are queryable in Loki
+PASS: stored fields match submitted events and collection contract
+Matching log records: 3; distinct expected events: 3
+Collector-to-Loki validation: 3/3 passed
+Provenance: synthetic heartbeat telemetry

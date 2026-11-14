@@ -1,0 +1,155 @@
+{
+  "status": "passed",
+  "ground_truth": "authorized-role-boundary-exercise",
+  "case_id": "3827d824-6eab-40ad-be33-9765a7befd28",
+  "checks": [
+    "closed case, observation window, and cooldown are clear",
+    "two actual analyst approval attempts return HTTP 403",
+    "two correlated denials remain below threshold",
+    "third analyst approval attempt returns HTTP 403",
+    "three actual denials produce an evidence-linked DET-006 finding",
+    "continuous monitor delivers and acknowledges the finding",
+    "source operator attribution is preserved without an inference target",
+    "aggregate operator finding cannot open a targeted response case",
+    "original case, transition history, and execution records are unchanged"
+  ],
+  "requests": [
+    {
+      "http_status": 403,
+      "request_id": "69b2789f-c547-49bc-af12-860aaa514a25",
+      "audit_delivery": "buffered",
+      "body": {
+        "detail": "Operator authorization denied"
+      }
+    },
+    {
+      "http_status": 403,
+      "request_id": "c73c52e7-0659-455c-a632-22f02773ca1f",
+      "audit_delivery": "buffered",
+      "body": {
+        "detail": "Operator authorization denied"
+      }
+    },
+    {
+      "http_status": 403,
+      "request_id": "94243300-1419-4288-a9a1-cf80518ff230",
+      "audit_delivery": "buffered",
+      "body": {
+        "detail": "Operator authorization denied"
+      }
+    }
+  ],
+  "case_before": {
+    "case": [
+      "closed_benign",
+      null,
+      null
+    ],
+    "audit_count": 2,
+    "execution_count": 0
+  },
+  "evaluated_finding": {
+    "rule_id": "DET-006",
+    "rule_version": "1.0",
+    "caller_ref": null,
+    "model": "not-applicable",
+    "event_ids": [
+      "c9216e90-b1a4-47bb-b648-1d89faac7576",
+      "0b418af6-e2b8-49ca-87c5-433cb4130740",
+      "1774feb3-a42b-4a9d-9a4a-6c9053b7e99d"
+    ],
+    "finding_id": "cccf626002218079da9a7fc382863f28543e77c0c40a73a01dbdc02e9b775f0c",
+    "severity": "medium",
+    "classification": "aggregate_privileged_authorization_denials",
+    "event_count": 3,
+    "threshold": 3,
+    "window_seconds": 60,
+    "first_seen": "2026-11-14T10:39:12.372230+00:00",
+    "last_seen": "2026-11-14T10:39:14.406371+00:00",
+    "detected_at": "2026-11-14T10:39:16.420177+00:00"
+  },
+  "receiver_record": {
+    "finding": {
+      "caller_ref": null,
+      "classification": "aggregate_privileged_authorization_denials",
+      "detected_at": "2026-11-14T10:39:17.282801+00:00",
+      "event_count": 3,
+      "event_ids": [
+        "c9216e90-b1a4-47bb-b648-1d89faac7576",
+        "0b418af6-e2b8-49ca-87c5-433cb4130740",
+        "1774feb3-a42b-4a9d-9a4a-6c9053b7e99d"
+      ],
+      "finding_id": "cccf626002218079da9a7fc382863f28543e77c0c40a73a01dbdc02e9b775f0c",
+      "first_seen": "2026-11-14T10:39:12.372230+00:00",
+      "last_seen": "2026-11-14T10:39:14.406371+00:00",
+      "model": "not-applicable",
+      "rule_id": "DET-006",
+      "rule_version": "1.0",
+      "severity": "medium",
+      "threshold": 3,
+      "window_seconds": 60
+    },
+    "received_at": "2026-11-14T10:39:17.300662+00:00"
+  },
+  "source_events": [
+    {
+      "actor_ref": "lab-operator-analyst",
+      "actor_role": "analyst",
+      "case_ref": "3827d824-6eab-40ad-be33-9765a7befd28",
+      "event_id": "c9216e90-b1a4-47bb-b648-1d89faac7576",
+      "event_time": "2026-11-14T10:39:12.364534+00:00",
+      "operation": "containment_approve",
+      "outcome": "denied",
+      "provenance": "live-lab",
+      "reason": "authorization_denied",
+      "request_id": "69b2789f-c547-49bc-af12-860aaa514a25",
+      "schema_version": "operator/1.0",
+      "source": "operator"
+    },
+    {
+      "actor_ref": "lab-operator-analyst",
+      "actor_role": "analyst",
+      "case_ref": "3827d824-6eab-40ad-be33-9765a7befd28",
+      "event_id": "0b418af6-e2b8-49ca-87c5-433cb4130740",
+      "event_time": "2026-11-14T10:39:12.376187+00:00",
+      "operation": "containment_approve",
+      "outcome": "denied",
+      "provenance": "live-lab",
+      "reason": "authorization_denied",
+      "request_id": "c73c52e7-0659-455c-a632-22f02773ca1f",
+      "schema_version": "operator/1.0",
+      "source": "operator"
+    },
+    {
+      "actor_ref": "lab-operator-analyst",
+      "actor_role": "analyst",
+      "case_ref": "3827d824-6eab-40ad-be33-9765a7befd28",
+      "event_id": "1774feb3-a42b-4a9d-9a4a-6c9053b7e99d",
+      "event_time": "2026-11-14T10:39:14.404812+00:00",
+      "operation": "containment_approve",
+      "outcome": "denied",
+      "provenance": "live-lab",
+      "reason": "authorization_denied",
+      "request_id": "94243300-1419-4288-a9a1-cf80518ff230",
+      "schema_version": "operator/1.0",
+      "source": "operator"
+    }
+  ],
+  "targeted_case_attempt": {
+    "http_status": 409,
+    "body": {
+      "detail": "Case operation rejected"
+    }
+  },
+  "case_after": {
+    "case": [
+      "closed_benign",
+      null,
+      null
+    ],
+    "audit_count": 2,
+    "execution_count": 0
+  },
+  "completed_at": "2026-11-14T10:39:18.476806+00:00",
+  "interpretation": "Controlled role-boundary violations were detected. The finding does not establish malicious intent."
+}

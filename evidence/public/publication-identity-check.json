@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-14T15:18:35.169638+00:00",
+  "status": "passed",
+  "scope": "Selected publication filenames and UTF-8 contents",
+  "files_checked": 229,
+  "private_local_account_name_matches": 0,
+  "limitations": [
+    "Git commit identity requires a separate check",
+    "New or modified publication files require another scan",
+    "Working checklist and private evidence were excluded"
+  ]
+}

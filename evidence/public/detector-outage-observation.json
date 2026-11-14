@@ -1,0 +1,150 @@
+{
+  "status": "incomplete_requires_review",
+  "scope": "detector process outage; no attack traffic generated",
+  "observations": [
+    {
+      "observed_at": "2026-11-13T21:12:24.317369+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604337.69663"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:12:27.325084+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604342.700116"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:12:30.337674+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604342.700116"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:12:33.345487+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604347.70541"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:12:36.357856+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604347.70541"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:12:39.369354+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604352.7084968"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:12:42.377605+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604357.710359"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:12:45.386715+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604357.710359"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:12:48.398815+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604362.712736"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:12:51.409237+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604362.712736"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:12:54.419537+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604367.717815"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:12:57.432853+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604372.719658"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:13:00.441290+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604372.719658"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:13:03.451392+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604377.7206862"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:13:06.463004+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604377.7206862"
+      ]
+    },
+    {
+      "observed_at": "2026-11-13T21:13:09.470801+00:00",
+      "scrape_values": [
+        "1"
+      ],
+      "freshness_values": [
+        "1794604382.7212741"
+      ]
+    }
+  ]
+}

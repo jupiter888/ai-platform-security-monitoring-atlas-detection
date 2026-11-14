@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-11-14T15:21:38.984759+00:00",
+  "status": "incomplete_requires_recovery",
+  "operation": "docker compose down",
+  "observations": {
+    "grafana": "Docker reported a zombie process and could not stop the container",
+    "prometheus": "removed",
+    "loki": "removed"
+  },
+  "volume_deletion_requested": false,
+  "recovery": "pending Docker Desktop restart"
+}

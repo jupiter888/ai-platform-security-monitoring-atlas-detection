@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-11-14T15:23:38.317895+00:00",
+  "status": "passed",
+  "python_service_ports_clear": [
+    8100,
+    8200,
+    8300,
+    8400,
+    8500
+  ],
+  "compose_containers_absent": true,
+  "volume_deletion_requested": false,
+  "recovery": "Docker Desktop restarted after Grafana zombie-process failure",
+  "grafana_init_configured": true,
+  "scope": "Controlled shutdown before existing-state restart"
+}

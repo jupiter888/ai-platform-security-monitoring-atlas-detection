@@ -1,0 +1,25 @@
+PASS: Unauthenticated case creation denied — HTTP 401
+PASS: Approver cannot create analyst case — HTTP 403
+PASS: Analyst opens benign-activity case — HTTP 201
+PASS: Analyst records approved benign activity — HTTP 200
+PASS: Closed benign case cannot request containment — HTTP 409
+PASS: Analyst opens controlled-exercise case — HTTP 201
+PASS: Approval cannot skip the request stage — HTTP 409
+PASS: Target override rejected — HTTP 400
+PASS: Analyst requests scoped controlled containment — HTTP 200
+PASS: Analyst cannot approve — HTTP 403
+PASS: Responder cannot approve — HTTP 403
+PASS: Responder can inspect the requested case — HTTP 200
+{
+  "case_id": "88e22258-33be-43f7-a0ff-233d5bd009c3",
+  "state": "containment_requested",
+  "requester": "lab-operator-analyst",
+  "caller_ref": "lab-caller-reader",
+  "model": "research-model",
+  "containment_action": "temporary_model_access_block",
+  "containment_seconds": 60,
+  "containment_policy_version": "1.0",
+  "response_executed": false
+}
+Live workflow preparation: 12/12 passed
+Approval pending; no containment executed.

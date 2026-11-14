@@ -1,0 +1,14 @@
+{
+  "status": "incomplete",
+  "manifest_sha256": "d73eac2f56e2a7161c384d1dec5c5007a22842d87d3a3575d303628a96e5530b",
+  "started_at": "2026-11-13T18:29:38.686125+00:00",
+  "expected_model_version": "40c0ae79f1e5f4da",
+  "maximum_total_requests": 124,
+  "inference_requests_attempted": 0,
+  "post_traffic_observation_seconds": 20,
+  "scenarios": [],
+  "detection_outcome": "not-yet-assessed",
+  "stopped_at": "2026-11-13T18:29:38.691619+00:00",
+  "failure_stage": "preflight",
+  "failure_type": "RuntimeError"
+}

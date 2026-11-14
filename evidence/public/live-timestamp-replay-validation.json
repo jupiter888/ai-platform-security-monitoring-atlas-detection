@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "scope": "timestamp rejection and explicit replay isolation",
+  "checks": [
+    "stale live event rejected",
+    "excessively future live event rejected",
+    "fixture credential can submit explicitly labeled historical replay",
+    "duplicate replay ID rejected within retained collector state",
+    "historical fixture is stored under replay provenance",
+    "original source time preserved with a new UTC collection time",
+    "live detector query excludes the stored replay event",
+    "collector counters match acceptance and rejection outcomes"
+  ],
+  "responses": [
+    {
+      "label": "stale live claim",
+      "http_status": 400,
+      "body": {
+        "detail": "Invalid telemetry"
+      },
+      "event_id": "388d53cf-f977-4970-8c29-c912c4159338"
+    },
+    {
+      "label": "future live claim",
+      "http_status": 400,
+      "body": {
+        "detail": "Invalid telemetry"
+      },
+      "event_id": "635c14a4-5f1e-46b0-aa5a-c85552e3e93f"
+    },
+    {
+      "label": "explicit historical replay",
+      "http_status": 202,
+      "body": {
+        "detail": "Event buffered"
+      },
+      "event_id": "860110e6-223f-4539-8c0a-1110f0856b44"
+    },
+    {
+      "label": "identical replay duplicate",
+      "http_status": 409,
+      "body": {
+        "detail": "Duplicate event"
+      },
+      "event_id": "860110e6-223f-4539-8c0a-1110f0856b44"
+    }
+  ],
+  "metrics_before": {
+    "p10_collector_events_accepted_total": 0,
+    "p10_collector_events_invalid_total": 0,
+    "p10_collector_events_duplicate_total": 0
+  },
+  "metrics_after": {
+    "p10_collector_events_accepted_total": 1,
+    "p10_collector_events_invalid_total": 2,
+    "p10_collector_events_duplicate_total": 1
+  },
+  "stored_replay": {
+    "caller_ref": null,
+    "collected_at": "2026-11-14T11:00:33.706692+00:00",
+    "event_id": "860110e6-223f-4539-8c0a-1110f0856b44",
+    "event_time": "2026-11-13T11:00:33.705042+00:00",
+    "model": "research-model",
+    "outcome": "denied",
+    "provenance": "replay",
+    "reason": "authentication_failed",
+    "request_id": "85d0c56e-36c5-4d1c-bd7a-983936d8e50b",
+    "schema_version": "1.0",
+    "source": "gateway"
+  }
+}

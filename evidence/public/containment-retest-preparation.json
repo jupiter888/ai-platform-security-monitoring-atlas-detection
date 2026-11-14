@@ -1,0 +1,150 @@
+{
+  "status": "approved_no_execution",
+  "started_at": "2026-11-14T11:07:06.952493+00:00",
+  "protocol_sha256": "067d0a0f225647b6b599c90dfefcde132d18470153d4f31744d17dc89fd13a83",
+  "source_finding_id": "e65b72eae915eb1b01a06b0c9037bb4edd7d0c2d4b2bceec3f6976879c66ad7d",
+  "operator_requests": [
+    {
+      "label": "case_open",
+      "actor_ref": "lab-operator-analyst",
+      "actor_role": "analyst",
+      "http_status": 201,
+      "request_id": "4d74bd5e-8d94-4969-91a9-d477ee39c361",
+      "audit_delivery": "buffered",
+      "observed_at": "2026-11-14T11:07:06.973514+00:00",
+      "body": {
+        "case_id": "d71ebca9-39be-4a61-815f-e1265ec004aa",
+        "finding_id": "e65b72eae915eb1b01a06b0c9037bb4edd7d0c2d4b2bceec3f6976879c66ad7d",
+        "caller_ref": "lab-caller-reader",
+        "model": "research-model",
+        "state": "open",
+        "opened_by": "lab-operator-analyst",
+        "requester": null,
+        "approver": null,
+        "opened_at": "2026-11-14T11:07:06.966132+00:00",
+        "updated_at": "2026-11-14T11:07:06.966132+00:00",
+        "containment_action": "temporary_model_access_block",
+        "containment_seconds": 60,
+        "containment_policy_version": "1.0",
+        "audit": [
+          {
+            "sequence": 13,
+            "timestamp": "2026-11-14T11:07:06.966132+00:00",
+            "actor": "lab-operator-analyst",
+            "role": "analyst",
+            "action": "case_opened",
+            "new_state": "open",
+            "reason": "finding_review"
+          }
+        ]
+      }
+    },
+    {
+      "label": "containment_request",
+      "actor_ref": "lab-operator-analyst",
+      "actor_role": "analyst",
+      "http_status": 200,
+      "request_id": "f44f2577-c41a-4ecb-8812-d21754060261",
+      "audit_delivery": "buffered",
+      "observed_at": "2026-11-14T11:07:06.983647+00:00",
+      "body": {
+        "case_id": "d71ebca9-39be-4a61-815f-e1265ec004aa",
+        "finding_id": "e65b72eae915eb1b01a06b0c9037bb4edd7d0c2d4b2bceec3f6976879c66ad7d",
+        "caller_ref": "lab-caller-reader",
+        "model": "research-model",
+        "state": "containment_requested",
+        "opened_by": "lab-operator-analyst",
+        "requester": "lab-operator-analyst",
+        "approver": null,
+        "opened_at": "2026-11-14T11:07:06.966132+00:00",
+        "updated_at": "2026-11-14T11:07:06.977812+00:00",
+        "containment_action": "temporary_model_access_block",
+        "containment_seconds": 60,
+        "containment_policy_version": "1.0",
+        "audit": [
+          {
+            "sequence": 13,
+            "timestamp": "2026-11-14T11:07:06.966132+00:00",
+            "actor": "lab-operator-analyst",
+            "role": "analyst",
+            "action": "case_opened",
+            "new_state": "open",
+            "reason": "finding_review"
+          },
+          {
+            "sequence": 14,
+            "timestamp": "2026-11-14T11:07:06.977812+00:00",
+            "actor": "lab-operator-analyst",
+            "role": "analyst",
+            "action": "containment_requested",
+            "new_state": "containment_requested",
+            "reason": "controlled_exercise"
+          }
+        ]
+      }
+    },
+    {
+      "label": "containment_approve",
+      "actor_ref": "lab-operator-approver",
+      "actor_role": "approver",
+      "http_status": 200,
+      "request_id": "e61a7aef-21c0-4d77-8fa4-854390347a2e",
+      "audit_delivery": "buffered",
+      "observed_at": "2026-11-14T11:07:06.993586+00:00",
+      "body": {
+        "case_id": "d71ebca9-39be-4a61-815f-e1265ec004aa",
+        "finding_id": "e65b72eae915eb1b01a06b0c9037bb4edd7d0c2d4b2bceec3f6976879c66ad7d",
+        "caller_ref": "lab-caller-reader",
+        "model": "research-model",
+        "state": "containment_approved",
+        "opened_by": "lab-operator-analyst",
+        "requester": "lab-operator-analyst",
+        "approver": "lab-operator-approver",
+        "opened_at": "2026-11-14T11:07:06.966132+00:00",
+        "updated_at": "2026-11-14T11:07:06.987670+00:00",
+        "containment_action": "temporary_model_access_block",
+        "containment_seconds": 60,
+        "containment_policy_version": "1.0",
+        "audit": [
+          {
+            "sequence": 13,
+            "timestamp": "2026-11-14T11:07:06.966132+00:00",
+            "actor": "lab-operator-analyst",
+            "role": "analyst",
+            "action": "case_opened",
+            "new_state": "open",
+            "reason": "finding_review"
+          },
+          {
+            "sequence": 14,
+            "timestamp": "2026-11-14T11:07:06.977812+00:00",
+            "actor": "lab-operator-analyst",
+            "role": "analyst",
+            "action": "containment_requested",
+            "new_state": "containment_requested",
+            "reason": "controlled_exercise"
+          },
+          {
+            "sequence": 15,
+            "timestamp": "2026-11-14T11:07:06.987670+00:00",
+            "actor": "lab-operator-approver",
+            "role": "approver",
+            "action": "containment_approved",
+            "new_state": "containment_approved",
+            "reason": "controlled_exercise"
+          }
+        ]
+      }
+    }
+  ],
+  "checks": [
+    "frozen request bounds verified",
+    "analyst, approver, and responder credentials are distinct",
+    "analyst opens the evidence-linked case with the frozen scope",
+    "analyst requests the fixed 60-second containment",
+    "distinct approver authorizes the persisted scope"
+  ],
+  "response_executed": false,
+  "case_id": "d71ebca9-39be-4a61-815f-e1265ec004aa",
+  "approved_at": "2026-11-14T11:07:06.994941+00:00"
+}

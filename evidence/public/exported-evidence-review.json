@@ -1,0 +1,29 @@
+{
+  "recorded_at": "2026-11-14T15:17:38.011665+00:00",
+  "review_type": "exported-evidence-consistency-review",
+  "reviewed_archive_sha256": "8d546a9f41379491386b20302b0e28908d1dd89b4a86e54d51b2e8c03bd9549e",
+  "archive_manifest_entries_verified": 135,
+  "public_evidence_files_in_snapshot": 95,
+  "checks": {
+    "frozen_protocol_hashes": "matched",
+    "heldout_request_ids": "124 distinct identifiers",
+    "reported_precision_recall_arithmetic": "consistent",
+    "response_retest": "26 unique request-event correlations verified",
+    "containment_duration": "60 seconds; phase timing consistent",
+    "sanitized_log_hashes": "26 matched",
+    "json_files": "40 parsed",
+    "jsonl_files": "6 parsed",
+    "local_markdown_targets": "no missing targets in reviewed archive",
+    "timeline_svg": "checksum preserved; no external assets",
+    "incomplete_exercises": "preserved and distinguished from passing results"
+  },
+  "limitations": [
+    "Review applies to the identified archive snapshot",
+    "Not an independent rerun of live experiments",
+    "Underlying Loki records for the complete held-out run were not all included",
+    "Pattern and content review cannot prove absence of every historical secret",
+    "SVG structure and checksum checks are not visual rendering verification",
+    "Container vulnerabilities remain unresolved",
+    "Clean service-startup verification remains pending"
+  ]
+}

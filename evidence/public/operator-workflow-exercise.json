@@ -1,0 +1,178 @@
+{
+  "status": "approved_no_execution",
+  "source_assessment_sha256": "5107e803c93cda10a5caf62b0981e1836c49df707fb9f25e04c5e15ea1bafbe5",
+  "selected_findings": {
+    "benign": "d09e49cf374eb9d6cbdee7c394c55c5ced3dae07811151c057f181edf5a06b88",
+    "containment": "1f12d2382ef8e2fb9ad5f47e9070ff9884a00ba824b551309ca2e3d95971534b"
+  },
+  "checks": [
+    {
+      "stage": "prepare",
+      "check": "Unauthenticated case creation denied",
+      "role": null,
+      "http_status": 401
+    },
+    {
+      "stage": "prepare",
+      "check": "Approver cannot create analyst case",
+      "role": "approver",
+      "http_status": 403
+    },
+    {
+      "stage": "prepare",
+      "check": "Analyst opens benign-activity case",
+      "role": "analyst",
+      "http_status": 201
+    },
+    {
+      "stage": "prepare",
+      "check": "Analyst records approved benign activity",
+      "role": "analyst",
+      "http_status": 200
+    },
+    {
+      "stage": "prepare",
+      "check": "Closed benign case cannot request containment",
+      "role": "analyst",
+      "http_status": 409
+    },
+    {
+      "stage": "prepare",
+      "check": "Analyst opens controlled-exercise case",
+      "role": "analyst",
+      "http_status": 201
+    },
+    {
+      "stage": "prepare",
+      "check": "Approval cannot skip the request stage",
+      "role": "approver",
+      "http_status": 409
+    },
+    {
+      "stage": "prepare",
+      "check": "Target override rejected",
+      "role": "analyst",
+      "http_status": 400
+    },
+    {
+      "stage": "prepare",
+      "check": "Analyst requests scoped controlled containment",
+      "role": "analyst",
+      "http_status": 200
+    },
+    {
+      "stage": "prepare",
+      "check": "Analyst cannot approve",
+      "role": "analyst",
+      "http_status": 403
+    },
+    {
+      "stage": "prepare",
+      "check": "Responder cannot approve",
+      "role": "responder",
+      "http_status": 403
+    },
+    {
+      "stage": "prepare",
+      "check": "Responder can inspect the requested case",
+      "role": "responder",
+      "http_status": 200
+    },
+    {
+      "stage": "approve",
+      "check": "Approver retrieves the requested scope",
+      "role": "approver",
+      "http_status": 200
+    },
+    {
+      "stage": "approve",
+      "check": "Distinct approver approves the persisted scope",
+      "role": "approver",
+      "http_status": 200
+    }
+  ],
+  "cases": {
+    "benign": {
+      "case_id": "2fbaf0c8-3e65-45d3-a782-f35af4cd6d2d",
+      "finding_id": "d09e49cf374eb9d6cbdee7c394c55c5ced3dae07811151c057f181edf5a06b88",
+      "caller_ref": "lab-caller-reader",
+      "model": "research-model",
+      "state": "closed_benign",
+      "opened_by": "lab-operator-analyst",
+      "requester": null,
+      "approver": null,
+      "opened_at": "2026-11-13T20:01:16.430144+00:00",
+      "updated_at": "2026-11-13T20:01:16.438682+00:00",
+      "containment_action": "temporary_model_access_block",
+      "containment_seconds": 60,
+      "containment_policy_version": "1.0",
+      "audit": [
+        {
+          "sequence": 1,
+          "timestamp": "2026-11-13T20:01:16.430144+00:00",
+          "actor": "lab-operator-analyst",
+          "role": "analyst",
+          "action": "case_opened",
+          "new_state": "open",
+          "reason": "finding_review"
+        },
+        {
+          "sequence": 2,
+          "timestamp": "2026-11-13T20:01:16.438682+00:00",
+          "actor": "lab-operator-analyst",
+          "role": "analyst",
+          "action": "case_closed_benign",
+          "new_state": "closed_benign",
+          "reason": "approved_activity"
+        }
+      ]
+    },
+    "containment": {
+      "case_id": "88e22258-33be-43f7-a0ff-233d5bd009c3",
+      "finding_id": "1f12d2382ef8e2fb9ad5f47e9070ff9884a00ba824b551309ca2e3d95971534b",
+      "caller_ref": "lab-caller-reader",
+      "model": "research-model",
+      "state": "containment_approved",
+      "opened_by": "lab-operator-analyst",
+      "requester": "lab-operator-analyst",
+      "approver": "lab-operator-approver",
+      "opened_at": "2026-11-13T20:01:16.453342+00:00",
+      "updated_at": "2026-11-13T20:02:09.052770+00:00",
+      "containment_action": "temporary_model_access_block",
+      "containment_seconds": 60,
+      "containment_policy_version": "1.0",
+      "audit": [
+        {
+          "sequence": 3,
+          "timestamp": "2026-11-13T20:01:16.453342+00:00",
+          "actor": "lab-operator-analyst",
+          "role": "analyst",
+          "action": "case_opened",
+          "new_state": "open",
+          "reason": "finding_review"
+        },
+        {
+          "sequence": 4,
+          "timestamp": "2026-11-13T20:01:16.471719+00:00",
+          "actor": "lab-operator-analyst",
+          "role": "analyst",
+          "action": "containment_requested",
+          "new_state": "containment_requested",
+          "reason": "controlled_exercise"
+        },
+        {
+          "sequence": 5,
+          "timestamp": "2026-11-13T20:02:09.052770+00:00",
+          "actor": "lab-operator-approver",
+          "role": "approver",
+          "action": "containment_approved",
+          "new_state": "containment_approved",
+          "reason": "controlled_exercise"
+        }
+      ]
+    }
+  },
+  "response_executed": false,
+  "principal_scope": "Distinct simulated principals operated by one lab operator",
+  "current_operation": "Distinct approver approves the persisted scope"
+}

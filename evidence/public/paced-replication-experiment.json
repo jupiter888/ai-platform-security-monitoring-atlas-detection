@@ -1,0 +1,352 @@
+{
+  "scenario": "paced-output-based-model-replication",
+  "ground_truth": "authorized-adversarial-emulation",
+  "data_provenance": "synthetic-research-queries",
+  "started_at": "2026-11-13T18:06:49.126770+00:00",
+  "completed_at": "2026-11-13T18:08:51.982592+00:00",
+  "elapsed_seconds": 122.855,
+  "target_model": "research-model",
+  "target_model_version": "40c0ae79f1e5f4da",
+  "query_budget": 36,
+  "requests_completed": 36,
+  "minimum_spacing_after_response_seconds": 3.5,
+  "suppression_inactive_at_preflight": true,
+  "training_queries": 24,
+  "heldout_queries": 12,
+  "evaluation": {
+    "heldout_target_agreement": 0.75,
+    "majority_baseline_agreement": 0.5,
+    "replica_predictions": [
+      "astronomy",
+      "astronomy",
+      "geology",
+      "astronomy",
+      "botany",
+      "botany",
+      "astronomy",
+      "astronomy",
+      "geology",
+      "geology",
+      "geology",
+      "geology"
+    ],
+    "target_predictions": [
+      "astronomy",
+      "astronomy",
+      "astronomy",
+      "astronomy",
+      "botany",
+      "botany",
+      "botany",
+      "astronomy",
+      "geology",
+      "astronomy",
+      "geology",
+      "geology"
+    ],
+    "training_label_counts": {
+      "astronomy": 8,
+      "botany": 8,
+      "geology": 8
+    }
+  },
+  "training_observations": [
+    {
+      "text": "Study stars using a telescope",
+      "request_id": "e69bb739-6400-4e04-bd6b-069e8db5a2f7",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.4375750710344339
+    },
+    {
+      "text": "Describe planets orbiting a star",
+      "request_id": "77431622-4b73-4113-a709-657e26bcdc14",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.5340065635222996
+    },
+    {
+      "text": "Observe the light of a galaxy",
+      "request_id": "34c182b9-412f-4c2d-adfc-8236af31310e",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.5966881291703261
+    },
+    {
+      "text": "Investigate the orbit of a moon",
+      "request_id": "b34d6ca8-a36f-45fd-a24d-3c602c2d607a",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.5831706910757409
+    },
+    {
+      "text": "Study a comet in the solar system",
+      "request_id": "364618e6-ca58-4461-a97d-c329d4cfe525",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.5231033517459123
+    },
+    {
+      "text": "Observe a supernova with a telescope",
+      "request_id": "a4c13c4e-2866-4cc9-90b2-37c0e09b57d1",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.4976500364689284
+    },
+    {
+      "text": "Measure light from stars and planets",
+      "request_id": "f5d93130-5855-40d7-adaa-7d33e58991bb",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.5843522440519492
+    },
+    {
+      "text": "Investigate gas between stars in a galaxy",
+      "request_id": "3af45637-28a3-402b-a7f7-9eea7092eb1e",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.5379054788259691
+    },
+    {
+      "text": "Study roots growing in soil",
+      "request_id": "1177d691-1af0-4802-9081-3cf5ea3341ca",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "botany",
+      "score": 0.4787211014695659
+    },
+    {
+      "text": "Describe how leaves use sunlight",
+      "request_id": "9519bca0-7b78-417a-99dc-760db1b9533d",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "botany",
+      "score": 0.5434419063052558
+    },
+    {
+      "text": "Investigate flowering plants and pollen",
+      "request_id": "234e411e-9dbd-42ca-9674-72d98fbd68a7",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "botany",
+      "score": 0.6339010318753268
+    },
+    {
+      "text": "Observe seeds growing into plants",
+      "request_id": "b60094ca-ab9e-4bf3-9c34-e20b15e3338f",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "botany",
+      "score": 0.5539627446595909
+    },
+    {
+      "text": "Study water uptake by tree roots",
+      "request_id": "8489e194-8172-41eb-a0d0-90312fe39e3e",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "botany",
+      "score": 0.49226560360632277
+    },
+    {
+      "text": "Investigate photosynthesis in green leaves",
+      "request_id": "3094d39a-ea86-4020-8387-5d6f4db511f5",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "botany",
+      "score": 0.4482941603293762
+    },
+    {
+      "text": "Describe pollination between flowers",
+      "request_id": "764e67c3-ad24-4513-9c4f-70ea41c5b9c4",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "botany",
+      "score": 0.6103252859013104
+    },
+    {
+      "text": "Observe plant stems and seed growth",
+      "request_id": "bf0ab441-932e-46b5-991f-8ae76eb08476",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "botany",
+      "score": 0.6004863461116099
+    },
+    {
+      "text": "Study minerals in a rock sample",
+      "request_id": "99fd1241-efb7-4fab-afb6-211031932e80",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "geology",
+      "score": 0.5079621804604776
+    },
+    {
+      "text": "Investigate earthquakes near a fault",
+      "request_id": "c86154f2-20d5-4c48-b0d8-642a9ce6e81c",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "geology",
+      "score": 0.4380845058782255
+    },
+    {
+      "text": "Describe lava from a volcano",
+      "request_id": "3e617e1c-447e-4897-a6f5-93b26921c789",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "geology",
+      "score": 0.37849250598349765
+    },
+    {
+      "text": "Observe layers of sedimentary rock",
+      "request_id": "9f56f54a-69f3-4fc1-8bb3-2b3cfad73e6e",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "geology",
+      "score": 0.5242629154707202
+    },
+    {
+      "text": "Study movement of tectonic plates",
+      "request_id": "b299cc23-c875-43ba-a8cc-9e2ab881120e",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "geology",
+      "score": 0.46870858576438523
+    },
+    {
+      "text": "Investigate erosion of rock formations",
+      "request_id": "6661fc86-40d4-4d2f-a34c-97112fb92b70",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "geology",
+      "score": 0.5897339069810921
+    },
+    {
+      "text": "Describe cooling magma and minerals",
+      "request_id": "a94af579-4925-4e50-a2a6-3d4acb0e04ff",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "geology",
+      "score": 0.5198695452573024
+    },
+    {
+      "text": "Study the crust and mantle of Earth",
+      "request_id": "59ecb8e1-e494-42a2-936e-7d06ff8de83e",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "geology",
+      "score": 0.46232993662722605
+    }
+  ],
+  "heldout_observations": [
+    {
+      "text": "Compare telescope observations of two galaxies",
+      "request_id": "3d83c251-059a-4554-a35c-50caf4194f8f",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.5478437504679211
+    },
+    {
+      "text": "Explain why a planet has an orbital period",
+      "request_id": "63263530-d14e-48ee-aac9-a17d4bc4779d",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.5106246100022416
+    },
+    {
+      "text": "Investigate a bright stellar explosion",
+      "request_id": "917491cf-96e3-4766-9f5d-a167f8bdb31b",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.4407095344065952
+    },
+    {
+      "text": "Describe the path of an icy comet",
+      "request_id": "171f2b97-c372-4dc2-bf5d-fe73d8728ea1",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.5302212181356298
+    },
+    {
+      "text": "Compare pollen production in flowering plants",
+      "request_id": "da31aead-614a-4ba4-a64c-67193c8f589f",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "botany",
+      "score": 0.5417679032545031
+    },
+    {
+      "text": "Explain how roots obtain dissolved nutrients",
+      "request_id": "1fb8c42a-c994-4bac-9c8f-e9f9adff041b",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "botany",
+      "score": 0.5259850396220286
+    },
+    {
+      "text": "Investigate leaf growth under different light",
+      "request_id": "9ed87709-8728-4f94-affa-e59cba4e4d8e",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "botany",
+      "score": 0.4483147234873242
+    },
+    {
+      "text": "Describe the development of a seedling",
+      "request_id": "6d4cee12-8681-4fce-a272-eb53be24679f",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.4954131632284796
+    },
+    {
+      "text": "Compare minerals in volcanic rock samples",
+      "request_id": "00043e26-442e-4762-a75e-94fbeb483c63",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "geology",
+      "score": 0.581865544216518
+    },
+    {
+      "text": "Explain displacement along an earthquake fault",
+      "request_id": "35ccf1fb-f624-4847-bcc5-b04a0b865735",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "astronomy",
+      "score": 0.36833721350548626
+    },
+    {
+      "text": "Investigate sediment transported by erosion",
+      "request_id": "2f69829c-4263-4186-aa14-b26abf8b7497",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "geology",
+      "score": 0.5542063678256585
+    },
+    {
+      "text": "Describe motion at a tectonic plate boundary",
+      "request_id": "64296ae4-28ba-41ad-a159-14a5833a6509",
+      "model": "research-model",
+      "model_version": "40c0ae79f1e5f4da",
+      "label": "geology",
+      "score": 0.4453098259003
+    }
+  ],
+  "limitations": [
+    "Same small query corpus as the burst experiment",
+    "Not an independent generalization benchmark",
+    "No complete model extraction or production accuracy claim",
+    "Actual collection-window volume requires separate verification",
+    "Detection absence requires monitoring-health evidence"
+  ]
+}

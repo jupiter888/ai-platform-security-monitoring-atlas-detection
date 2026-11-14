@@ -1,0 +1,14 @@
+{
+  "status": "incomplete",
+  "completed_checks": [
+    "authenticated case retrieval",
+    "unchanged case content and transition history"
+  ],
+  "failure_stage": "request-ID header lookup",
+  "failure": "Case-sensitive dictionary lookup returned no value",
+  "case_transition_executed": false,
+  "limitations": [
+    "The successful read may have emitted an audit event",
+    "This attempt's request ID was not captured"
+  ]
+}

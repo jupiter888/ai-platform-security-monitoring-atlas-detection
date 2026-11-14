@@ -1,0 +1,175 @@
+{
+  "status": "passed",
+  "scope": "one eight-request concurrent burst and one recovery request",
+  "ground_truth": "authorized-capacity-exercise",
+  "checks": [
+    "eight requests complete with distinct correlation IDs",
+    "burst produces successful inference without unexpected statuses",
+    "all responses satisfy inference or admission contracts",
+    "inference succeeds after the burst completes",
+    "all nine responses correlate to matching Loki events",
+    "live admission rejection observed"
+  ],
+  "requests": [
+    {
+      "index": 0,
+      "http_status": 503,
+      "request_id": "6961f2fe-f42f-465e-9dca-66c8f234d2e6",
+      "retry_after": "1",
+      "elapsed_seconds": 0.140475,
+      "body": {
+        "detail": "Inference capacity unavailable"
+      }
+    },
+    {
+      "index": 1,
+      "http_status": 503,
+      "request_id": "8f4c4032-0b93-4747-bfb5-5f3c231db85a",
+      "retry_after": "1",
+      "elapsed_seconds": 0.053309,
+      "body": {
+        "detail": "Inference capacity unavailable"
+      }
+    },
+    {
+      "index": 2,
+      "http_status": 200,
+      "request_id": "618be83d-a0f6-408c-ab69-a7c364585c80",
+      "retry_after": null,
+      "elapsed_seconds": 0.055242,
+      "body": {
+        "model": "research-model",
+        "model_version": "40c0ae79f1e5f4da",
+        "label": "astronomy",
+        "score": 0.6722844612296203
+      }
+    },
+    {
+      "index": 3,
+      "http_status": 503,
+      "request_id": "5e8dea8d-7afa-4e80-b0ac-f09755f89c04",
+      "retry_after": "1",
+      "elapsed_seconds": 0.054743,
+      "body": {
+        "detail": "Inference capacity unavailable"
+      }
+    },
+    {
+      "index": 4,
+      "http_status": 503,
+      "request_id": "d02eee7c-453c-4b5b-af67-ec68af656430",
+      "retry_after": "1",
+      "elapsed_seconds": 0.055846,
+      "body": {
+        "detail": "Inference capacity unavailable"
+      }
+    },
+    {
+      "index": 5,
+      "http_status": 503,
+      "request_id": "99fe6c3b-5292-4729-b5b4-ce95ab808293",
+      "retry_after": "1",
+      "elapsed_seconds": 0.052704,
+      "body": {
+        "detail": "Inference capacity unavailable"
+      }
+    },
+    {
+      "index": 6,
+      "http_status": 503,
+      "request_id": "f961d92e-aff2-48b3-86fe-27e0a80ca33d",
+      "retry_after": "1",
+      "elapsed_seconds": 0.055143,
+      "body": {
+        "detail": "Inference capacity unavailable"
+      }
+    },
+    {
+      "index": 7,
+      "http_status": 200,
+      "request_id": "03e3f996-4c75-41de-a490-c427b612677d",
+      "retry_after": null,
+      "elapsed_seconds": 0.139913,
+      "body": {
+        "model": "research-model",
+        "model_version": "40c0ae79f1e5f4da",
+        "label": "astronomy",
+        "score": 0.6722844612296203
+      }
+    },
+    {
+      "index": "recovery",
+      "http_status": 200,
+      "request_id": "7d1dfa48-6d0f-44f4-9b96-a463c98aedb0",
+      "retry_after": null,
+      "elapsed_seconds": 0.007887,
+      "body": {
+        "model": "research-model",
+        "model_version": "40c0ae79f1e5f4da",
+        "label": "astronomy",
+        "score": 0.6722844612296203
+      }
+    }
+  ],
+  "burst_http_counts": {
+    "503": 6,
+    "200": 2
+  },
+  "correlations": [
+    {
+      "request_id": "6961f2fe-f42f-465e-9dca-66c8f234d2e6",
+      "event_id": "dd312e43-02d5-4c5e-8f99-52f909725602",
+      "reason": "concurrency_exceeded",
+      "outcome": "unavailable"
+    },
+    {
+      "request_id": "8f4c4032-0b93-4747-bfb5-5f3c231db85a",
+      "event_id": "7db32a4c-24ec-4ed8-8833-866ed49e8034",
+      "reason": "concurrency_exceeded",
+      "outcome": "unavailable"
+    },
+    {
+      "request_id": "618be83d-a0f6-408c-ab69-a7c364585c80",
+      "event_id": "1a6e2a8b-e2f7-4631-9db5-e83ef5da800f",
+      "reason": "inference_succeeded",
+      "outcome": "allowed"
+    },
+    {
+      "request_id": "5e8dea8d-7afa-4e80-b0ac-f09755f89c04",
+      "event_id": "62653cb5-9811-4643-9714-b16607710026",
+      "reason": "concurrency_exceeded",
+      "outcome": "unavailable"
+    },
+    {
+      "request_id": "d02eee7c-453c-4b5b-af67-ec68af656430",
+      "event_id": "9aa6c7fb-1982-44ca-a62f-47498d539672",
+      "reason": "concurrency_exceeded",
+      "outcome": "unavailable"
+    },
+    {
+      "request_id": "99fe6c3b-5292-4729-b5b4-ce95ab808293",
+      "event_id": "ed0cc73f-71d6-4d3c-a446-cc1ada555ced",
+      "reason": "concurrency_exceeded",
+      "outcome": "unavailable"
+    },
+    {
+      "request_id": "f961d92e-aff2-48b3-86fe-27e0a80ca33d",
+      "event_id": "e7f024ce-914f-42a5-a3e1-6be05d765e28",
+      "reason": "concurrency_exceeded",
+      "outcome": "unavailable"
+    },
+    {
+      "request_id": "03e3f996-4c75-41de-a490-c427b612677d",
+      "event_id": "ca1002e9-a497-44e3-b21e-a08007e1f007",
+      "reason": "inference_succeeded",
+      "outcome": "allowed"
+    },
+    {
+      "request_id": "7d1dfa48-6d0f-44f4-9b96-a463c98aedb0",
+      "event_id": "d82e6450-d924-463b-8614-3361592b4457",
+      "reason": "inference_succeeded",
+      "outcome": "allowed"
+    }
+  ],
+  "completed_at": "2026-11-14T10:03:02.212746+00:00"
+}

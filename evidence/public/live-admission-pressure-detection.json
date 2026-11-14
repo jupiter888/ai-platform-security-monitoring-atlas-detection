@@ -1,0 +1,216 @@
+{
+  "status": "passed",
+  "ground_truth": "authorized-capacity-exercise",
+  "scope": "eight concurrent requests and one recovery request",
+  "checks": [
+    "pressure window and cooldown are clear",
+    "eight correlated requests complete with expected HTTP statuses",
+    "responses satisfy inference and capacity contracts",
+    "inference recovers after pressure ends",
+    "all nine HTTP responses correlate to matching Loki events",
+    "actual rejection events satisfy DET-005",
+    "continuous finding delivery agrees with the receiver record",
+    "live detector explicitly records the finding as queued"
+  ],
+  "requests": [
+    {
+      "index": 0,
+      "http_status": 503,
+      "request_id": "25ac0598-dddc-4653-8c60-30bcf2ac961a",
+      "retry_after": "1",
+      "body": {
+        "detail": "Inference capacity unavailable"
+      }
+    },
+    {
+      "index": 1,
+      "http_status": 503,
+      "request_id": "af8cc876-b44b-48d2-9eb6-40cd9fc5c912",
+      "retry_after": "1",
+      "body": {
+        "detail": "Inference capacity unavailable"
+      }
+    },
+    {
+      "index": 2,
+      "http_status": 200,
+      "request_id": "7c3272e2-e73d-4477-b7c8-334e3fd256ca",
+      "retry_after": null,
+      "body": {
+        "model": "research-model",
+        "model_version": "40c0ae79f1e5f4da",
+        "label": "astronomy",
+        "score": 0.6722844612296203
+      }
+    },
+    {
+      "index": 3,
+      "http_status": 503,
+      "request_id": "44f2e3fd-55cd-4cad-b868-51ec7684024c",
+      "retry_after": "1",
+      "body": {
+        "detail": "Inference capacity unavailable"
+      }
+    },
+    {
+      "index": 4,
+      "http_status": 503,
+      "request_id": "012c79cd-9657-4ffc-8976-b37c52d6860b",
+      "retry_after": "1",
+      "body": {
+        "detail": "Inference capacity unavailable"
+      }
+    },
+    {
+      "index": 5,
+      "http_status": 503,
+      "request_id": "2e59bbab-f2e3-4f3a-8f87-27d68b28a95a",
+      "retry_after": "1",
+      "body": {
+        "detail": "Inference capacity unavailable"
+      }
+    },
+    {
+      "index": 6,
+      "http_status": 503,
+      "request_id": "df0cb1e7-8aab-44d9-956e-a8a69a65b858",
+      "retry_after": "1",
+      "body": {
+        "detail": "Inference capacity unavailable"
+      }
+    },
+    {
+      "index": 7,
+      "http_status": 200,
+      "request_id": "03ea38e0-5863-46b7-bb87-546cd60f55e4",
+      "retry_after": null,
+      "body": {
+        "model": "research-model",
+        "model_version": "40c0ae79f1e5f4da",
+        "label": "astronomy",
+        "score": 0.6722844612296203
+      }
+    },
+    {
+      "index": "recovery",
+      "http_status": 200,
+      "request_id": "48b520ee-9994-47f9-bee0-6aa476c2aed2",
+      "retry_after": null,
+      "body": {
+        "model": "research-model",
+        "model_version": "40c0ae79f1e5f4da",
+        "label": "astronomy",
+        "score": 0.6722844612296203
+      }
+    }
+  ],
+  "traffic_started_at": "2026-11-14T10:09:04.539038+00:00",
+  "burst_http_counts": {
+    "503": 6,
+    "200": 2
+  },
+  "correlations": [
+    {
+      "request_id": "25ac0598-dddc-4653-8c60-30bcf2ac961a",
+      "event_id": "ee16d723-0f99-4974-b735-8c1a4a9779c7",
+      "reason": "concurrency_exceeded"
+    },
+    {
+      "request_id": "af8cc876-b44b-48d2-9eb6-40cd9fc5c912",
+      "event_id": "9a55d0b9-a64a-402a-bd2d-8f617e39fa02",
+      "reason": "concurrency_exceeded"
+    },
+    {
+      "request_id": "7c3272e2-e73d-4477-b7c8-334e3fd256ca",
+      "event_id": "4f77b68d-307a-4801-86d4-a3b0d0ffbf6e",
+      "reason": "inference_succeeded"
+    },
+    {
+      "request_id": "44f2e3fd-55cd-4cad-b868-51ec7684024c",
+      "event_id": "14ccd8df-dda6-4bf1-9339-e5287af23d52",
+      "reason": "concurrency_exceeded"
+    },
+    {
+      "request_id": "012c79cd-9657-4ffc-8976-b37c52d6860b",
+      "event_id": "884e61ba-9f2f-4b35-b687-39caf117f875",
+      "reason": "concurrency_exceeded"
+    },
+    {
+      "request_id": "2e59bbab-f2e3-4f3a-8f87-27d68b28a95a",
+      "event_id": "6cd6d71e-be68-41a5-a19a-b57a464725b6",
+      "reason": "concurrency_exceeded"
+    },
+    {
+      "request_id": "df0cb1e7-8aab-44d9-956e-a8a69a65b858",
+      "event_id": "4e0fd528-59a1-4dea-a7ab-dbf564626a5c",
+      "reason": "concurrency_exceeded"
+    },
+    {
+      "request_id": "03ea38e0-5863-46b7-bb87-546cd60f55e4",
+      "event_id": "d2b75ba3-6efd-460d-8cdc-9a99229aa891",
+      "reason": "inference_succeeded"
+    },
+    {
+      "request_id": "48b520ee-9994-47f9-bee0-6aa476c2aed2",
+      "event_id": "15d5ea8f-b6c7-48cb-a650-bd48b6b5c0e9",
+      "reason": "inference_succeeded"
+    }
+  ],
+  "evaluated_finding": {
+    "finding_id": "1d4cdf1ca49c83f97cb259cf3fac94b8c3dea879edcf7a12606df58e9c9d28a3",
+    "rule_id": "DET-005",
+    "rule_version": "1.0",
+    "severity": "medium",
+    "classification": "repeated_inference_admission_rejections",
+    "caller_ref": "lab-caller-reader",
+    "model": "research-model",
+    "event_count": 6,
+    "threshold": 3,
+    "window_seconds": 60,
+    "first_seen": "2026-11-14T10:09:04.569851+00:00",
+    "last_seen": "2026-11-14T10:09:04.659566+00:00",
+    "detected_at": "2026-11-14T10:09:06.688938+00:00",
+    "event_ids": [
+      "ee16d723-0f99-4974-b735-8c1a4a9779c7",
+      "6cd6d71e-be68-41a5-a19a-b57a464725b6",
+      "9a55d0b9-a64a-402a-bd2d-8f617e39fa02",
+      "14ccd8df-dda6-4bf1-9339-e5287af23d52",
+      "4e0fd528-59a1-4dea-a7ab-dbf564626a5c",
+      "884e61ba-9f2f-4b35-b687-39caf117f875"
+    ]
+  },
+  "receiver_record": {
+    "finding": {
+      "caller_ref": "lab-caller-reader",
+      "classification": "repeated_inference_admission_rejections",
+      "detected_at": "2026-11-14T10:09:07.407043+00:00",
+      "event_count": 6,
+      "event_ids": [
+        "ee16d723-0f99-4974-b735-8c1a4a9779c7",
+        "6cd6d71e-be68-41a5-a19a-b57a464725b6",
+        "9a55d0b9-a64a-402a-bd2d-8f617e39fa02",
+        "14ccd8df-dda6-4bf1-9339-e5287af23d52",
+        "4e0fd528-59a1-4dea-a7ab-dbf564626a5c",
+        "884e61ba-9f2f-4b35-b687-39caf117f875"
+      ],
+      "finding_id": "1d4cdf1ca49c83f97cb259cf3fac94b8c3dea879edcf7a12606df58e9c9d28a3",
+      "first_seen": "2026-11-14T10:09:04.569851+00:00",
+      "last_seen": "2026-11-14T10:09:04.659566+00:00",
+      "model": "research-model",
+      "rule_id": "DET-005",
+      "rule_version": "1.0",
+      "severity": "medium",
+      "threshold": 3,
+      "window_seconds": 60
+    },
+    "received_at": "2026-11-14T10:09:07.451240+00:00"
+  },
+  "enqueue_diagnostic": {
+    "disposition": "queued",
+    "event": "finding_enqueue_disposition",
+    "finding_id": "1d4cdf1ca49c83f97cb259cf3fac94b8c3dea879edcf7a12606df58e9c9d28a3",
+    "rule_id": "DET-005"
+  },
+  "completed_at": "2026-11-14T10:09:08.712282+00:00",
+  "interpretation": "Authorized capacity exercise detected; admission pressure does not establish malicious intent."
+}

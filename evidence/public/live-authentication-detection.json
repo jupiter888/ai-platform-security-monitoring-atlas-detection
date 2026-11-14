@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "scope": "five actual invalid-credential requests to the local API",
+  "checks": [
+    "authentication observation window and delivery cooldown are clear",
+    "four actual invalid-credential requests return HTTP 401",
+    "four requests correlate to unattributed authentication events",
+    "four failures produce no DET-004 finding in threshold evaluation",
+    "fifth actual invalid-credential request returns HTTP 401",
+    "five failures produce one evidence-linked aggregate finding",
+    "continuous monitor delivers the finding to durable storage",
+    "delivered finding preserves unknown identity and no model target",
+    "unattributed finding cannot open a caller-specific response case"
+  ],
+  "requests": [
+    {
+      "http_status": 401,
+      "request_id": "efc18365-412f-4896-80ab-519f587e1a48",
+      "body": {
+        "detail": "Authentication failed"
+      }
+    },
+    {
+      "http_status": 401,
+      "request_id": "22e709a9-45d1-4797-b2b3-ae934292727a",
+      "body": {
+        "detail": "Authentication failed"
+      }
+    },
+    {
+      "http_status": 401,
+      "request_id": "5a6f2bc3-5a38-4042-8e9b-927aa26c71c9",
+      "body": {
+        "detail": "Authentication failed"
+      }
+    },
+    {
+      "http_status": 401,
+      "request_id": "400a1c05-f2fb-4cc5-b04b-6052b15e627e",
+      "body": {
+        "detail": "Authentication failed"
+      }
+    },
+    {
+      "http_status": 401,
+      "request_id": "8e2db5cb-40de-409c-b20d-dfe5c41824f5",
+      "body": {
+        "detail": "Authentication failed"
+      }
+    }
+  ],
+  "evaluated_finding": {
+    "rule_id": "DET-004",
+    "rule_version": "1.0",
+    "caller_ref": null,
+    "model": "not-applicable",
+    "event_ids": [
+      "a83af934-2a56-429e-8bbc-73cc397c6dd3",
+      "0e1e78ad-ea5b-4504-ad7b-0d65ab5dae16",
+      "87bc39bc-e7f9-4444-8ea2-1a413a23b9d3",
+      "ca59fadf-f62f-456d-92ce-eaed315ef6b3",
+      "eb36ecb2-a869-48df-a96d-8fad1fe2a01f"
+    ],
+    "finding_id": "ab221d55800177e9ac890ba39d5b8ef2cb4bb03fdd396d1a1d978ee9b14e798c",
+    "severity": "medium",
+    "classification": "aggregate_authentication_failures",
+    "event_count": 5,
+    "threshold": 5,
+    "window_seconds": 60,
+    "first_seen": "2026-11-14T09:51:30.169390+00:00",
+    "last_seen": "2026-11-14T09:51:32.212874+00:00",
+    "detected_at": "2026-11-14T09:51:34.226927+00:00"
+  },
+  "receiver_record": {
+    "finding": {
+      "caller_ref": null,
+      "classification": "aggregate_authentication_failures",
+      "detected_at": "2026-11-14T09:51:32.718760+00:00",
+      "event_count": 5,
+      "event_ids": [
+        "a83af934-2a56-429e-8bbc-73cc397c6dd3",
+        "0e1e78ad-ea5b-4504-ad7b-0d65ab5dae16",
+        "87bc39bc-e7f9-4444-8ea2-1a413a23b9d3",
+        "ca59fadf-f62f-456d-92ce-eaed315ef6b3",
+        "eb36ecb2-a869-48df-a96d-8fad1fe2a01f"
+      ],
+      "finding_id": "ab221d55800177e9ac890ba39d5b8ef2cb4bb03fdd396d1a1d978ee9b14e798c",
+      "first_seen": "2026-11-14T09:51:30.169390+00:00",
+      "last_seen": "2026-11-14T09:51:32.212874+00:00",
+      "model": "not-applicable",
+      "rule_id": "DET-004",
+      "rule_version": "1.0",
+      "severity": "medium",
+      "threshold": 5,
+      "window_seconds": 60
+    },
+    "received_at": "2026-11-14T09:51:32.758238+00:00"
+  },
+  "targeted_case_attempt": {
+    "http_status": 409,
+    "body": {
+      "detail": "Case operation rejected"
+    }
+  },
+  "completed_at": "2026-11-14T09:51:34.270153+00:00"
+}

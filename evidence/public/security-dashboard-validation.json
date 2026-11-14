@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "dashboard_uid": "p10-security-operations",
+  "checks": [
+    "unauthenticated dashboard data query rejected",
+    "Detector scrape query succeeds",
+    "Query cycle query succeeds",
+    "Delivery cycle query succeeds",
+    "Successful poll age query succeeds",
+    "Pending findings query succeeds",
+    "Acknowledged outbox records query succeeds",
+    "Delivery failures \u00b7 last 15 min query succeeds",
+    "Collector buffer query succeeds",
+    "Finding queue and acknowledgment activity query succeeds",
+    "Persistent delivery backlog query succeeds",
+    "Actual inference decisions \u00b7 rolling 1 minute query succeeds",
+    "Containment and policy-check events query succeeds",
+    "Grafana retrieves the recorded containment request ID"
+  ],
+  "panel_results": [
+    {
+      "title": "Detector scrape",
+      "http_status": 200,
+      "frame_count": 1,
+      "query_succeeded": true
+    },
+    {
+      "title": "Query cycle",
+      "http_status": 200,
+      "frame_count": 1,
+      "query_succeeded": true
+    },
+    {
+      "title": "Delivery cycle",
+      "http_status": 200,
+      "frame_count": 1,
+      "query_succeeded": true
+    },
+    {
+      "title": "Successful poll age",
+      "http_status": 200,
+      "frame_count": 1,
+      "query_succeeded": true
+    },
+    {
+      "title": "Pending findings",
+      "http_status": 200,
+      "frame_count": 1,
+      "query_succeeded": true
+    },
+    {
+      "title": "Acknowledged outbox records",
+      "http_status": 200,
+      "frame_count": 1,
+      "query_succeeded": true
+    },
+    {
+      "title": "Delivery failures \u00b7 last 15 min",
+      "http_status": 200,
+      "frame_count": 1,
+      "query_succeeded": true
+    },
+    {
+      "title": "Collector buffer",
+      "http_status": 200,
+      "frame_count": 1,
+      "query_succeeded": true
+    },
+    {
+      "title": "Finding queue and acknowledgment activity",
+      "http_status": 200,
+      "frame_count": 3,
+      "query_succeeded": true
+    },
+    {
+      "title": "Persistent delivery backlog",
+      "http_status": 200,
+      "frame_count": 1,
+      "query_succeeded": true
+    },
+    {
+      "title": "Actual inference decisions \u00b7 rolling 1 minute",
+      "http_status": 200,
+      "frame_count": 2,
+      "query_succeeded": true
+    },
+    {
+      "title": "Containment and policy-check events",
+      "http_status": 200,
+      "frame_count": 1,
+      "query_succeeded": true
+    }
+  ],
+  "containment_request_id": "4eea9185-aa24-46f8-8977-9579fbaa9ffa",
+  "scope": "Authenticated Grafana query execution for all 12 panels and retrieval of the actual containment event"
+}

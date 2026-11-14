@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "case_id": "3827d824-6eab-40ad-be33-9765a7befd28",
+  "checks": [
+    "authenticated analyst reads the unchanged closed case",
+    "operator API reports collector acceptance",
+    "matching operator audit event is stored in Loki",
+    "stored event contains only the bounded operator contract"
+  ],
+  "http_observation": {
+    "http_status": 200,
+    "request_id": "9a24a680-a265-4db2-a80e-6347a3c91b88",
+    "audit_delivery": "buffered",
+    "case_state": "closed_benign"
+  },
+  "audit_event": {
+    "actor_ref": "lab-operator-analyst",
+    "actor_role": "analyst",
+    "case_ref": "3827d824-6eab-40ad-be33-9765a7befd28",
+    "collected_at": "2026-11-14T10:55:04.436217+00:00",
+    "event_id": "92da1573-5fc7-4d58-9a07-317eb75807a7",
+    "event_time": "2026-11-14T10:55:04.428727+00:00",
+    "operation": "case_read",
+    "outcome": "allowed",
+    "provenance": "live-lab",
+    "reason": "operation_succeeded",
+    "request_id": "9a24a680-a265-4db2-a80e-6347a3c91b88",
+    "schema_version": "operator/1.0",
+    "source": "operator"
+  }
+}

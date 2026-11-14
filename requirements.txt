@@ -1,0 +1,6 @@
+# Project 10 — Development and validation dependencies
+-r requirements-runtime.txt
+
+httpx==0.28.1
+
+# Tests use Python's standard-library unittest.
